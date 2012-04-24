@@ -99,6 +99,7 @@ GEM
     mocha (0.10.5)
       metaclass (~> 0.0.1)
     multi_json (1.3.2)
+    mysql (2.8.1-x86-mingw32)
     mysql2 (0.3.11-x86-mingw32)
     nifty-generators (0.4.6)
     nokogiri (1.5.2-x86-mingw32)
@@ -174,6 +175,7 @@ DEPENDENCIES
   meta_search (>= 1.1.0.pre)
   mocha (~> 0.10.2)
   multi_json
+  mysql
   mysql2 (= 0.3.11)
   nifty-generators
   nokogiri

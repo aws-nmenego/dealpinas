@@ -6,6 +6,7 @@ gem 'rails'
 
 gem 'mysql2', '0.3.11'
 #gem 'typus'
+#gem 'pg'
 gem 'nokogiri'
 gem 'geokit'
 gem 'composite_primary_keys'

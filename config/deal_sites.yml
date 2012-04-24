@@ -1,0 +1,326 @@
+---
+Geokit:
+  address: 192.168.179.202
+  port: 3128
+proxy:
+  address: 192.168.179.202
+  port: 3128
+  http: http://192.168.179.202:3128
+metrodeal:
+  site_url: http://www.metrodeal.com/
+  child_links: //div[@class='dealbox-mid_landing']/div[2]/div[3]/div/div/a
+  rss_id:
+    str: ''
+    :@taguri: x-private:null
+  title: /html/body/div[4]/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div[3]/div[2]/div[3]/strong
+  price: /html/body/div[4]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div[2]/div/span
+  location: //*[@class="locationmap"]/div/p
+  sold: /html/body/div[4]/div/div[2]/div/div/div/div[2]/div[2]/div[3]/div/div[2]
+  items:
+    str: ''
+    :@taguri: x-private:null
+  category:
+    str: ''
+    :@taguri: x-private:null
+  deal_thumb: /html/body/div[4]/div/div[2]/div/div/div/div[2]/div/div/img
+  description: /html/body/div[4]/div/div[2]/div/div/div/div[2]/div[2]/div/div[2]/div
+  discount: /html/body/div[4]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/span
+  image_map:
+    str: ''
+    :@taguri: x-private:null
+  link_to_map: /html/body/div[4]/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div[3]/div[2]/div/a
+  author: MetroDeal
+  expiry: /html/body/div[3]/div/script[5]
+  scrape_script: get_metrodeal.com.rb
+  scraping: true
+  scrape_time: '10:45'
+groupon:
+  site_url: http://www.beeconomic.com/
+  shopping_url: http://www.beeconomic.com.ph/deals/shopping
+  travel_url: http://www.beeconomic.com.ph/deals/groupon-travel
+  cebu_url: http://www.beeconomic.com.ph/deals/cebu
+  manila_url: http://www.beeconomic.com.ph/deals/metro_manila
+  davao_url: http://www.beeconomic.com.ph/deals/davao
+  child_links:
+    a: //*[@class="extraDealDescription"]/h3/a
+    b: //*[@class="extraDealDescription"]/h3/a
+  rss_id:
+    str: ''
+    :@taguri: x-private:null
+  title: //*[@class="merchantContact"]/h2
+  price: /html/body/div/div[9]/div[2]/div/div/div[2]/form/div/span/span
+  location: /html/body/div/div[9]/div[2]/div[3]/div[2]/div/div/text()[string-length(normalize-space())
+    > 0]
+  location_city: //*[@class="merchantContact"]/text()[normalize-space()][2]
+  sold: //*[@id="jDealSoldAmount"]
+  items: /html/body/div/div[9]/div[2]/div/div/div[2]/div[2]/div[3]/div[2]
+  category: //*[@id="jAllCitiesButton"]
+  deal_thumb: //*[@id="contentDealDescription"]//img
+  description: //*[@id="contentDealTitle"]/h1
+  discount: /html/body/div/div[9]/div[2]/div/div/div[2]/form/div/table/tr[2]/td
+  image_map: //*[@class="googleMap jGoogleMap"]/img
+  link_to_map:
+    str: ''
+    :@taguri: x-private:null
+  author: Groupon Philippines
+  expiry: //*[@id="currentTimeLeft"]
+  scrape_script: get_beeconomic.com.ph.rb
+  scrape_time: '10:45'
+  scraping: true
+ensogo:
+  site_url: http://www.ensogo.com.ph
+  parent_container: //li[contains(@class,"deals-item ")]
+  title: //span[@class="nameL"]
+  description: //div[@class="deal-title"]/span/a
+  deal_url: //div[@class="deal-title"]/span/a
+  price: //span[@class="value"]
+  quantity: //span[@class="qty-tx"]
+  deal_thumb: //div[@class="deal-stage"]/div/a/img
+  discount: //span[@class="save-value"]
+  author: Ensogo
+  scrape_script: get_ensogo.com.ph.rb
+  scraping: false
+  scrape_time: '10:45'
+clever_buy:
+  site_url: http://www.cleverbuy.com.ph/
+  parent_container: //div[@class="clever-main"]
+  title: //div[@class="deal_title2"]/a
+  description: //div[@class="deal_about_summary"]
+  price: //span[@class="label_sub_value"]
+  quantity: //div[@class="clever-header-sub_level2_sold_counter"]
+  deal_url: //div[@class="deal_more_button"]/a
+  deal_thumb: //div[@class="clever-content-img"]/a/img
+  discount: //span[@class="label_sub_value"]
+  expiry: //span[@class="countdown-timer"]
+  deal_page: //div[@class="reviewbox"]
+  main_location_name: //div[@id="company-details-box"]/address
+  map_script: //div[@id="company-details-box"]/script[3]
+  branches: //div[@class="store-branch-box"]/address
+  address: //div[@class="store-branch-google-map"]/a
+  author: Clever Buy
+  scrape_script: get_clever_buy.com.ph.rb
+  scraping: false
+  scrape_time: '10:45'
+awesome_ph:
+  site_url: http://awesome.ph/?signedup=1
+  parent_container: //div[@class="deal_of_the_day"]
+  title: //h3[@class="new_deal_title "]/a
+  description: //div[@id="hightlight"]
+  price: //div[@id="price"]
+  quantity:
+    str: ''
+    :@taguri: x-private:null
+  deal_url: //h3[@class="new_deal_title "]/a
+  deal_thumb: //div[@class="new_deal_left"]/a/img
+  discount: //span[@class="new_deal_font_green"]
+  expiry: //div[@id="new_deal_time"]/p/span
+  author: Amazing PH
+  scrape_script: get_awesome.ph.rb
+  scrape_time: '10:45'
+  scraping: false
+halo_halo_deals:
+  site_url: http://www.halohalodeals.com/active-deals.html
+  parent_container: //div[@class="clsbord"]
+  title: //div[@class="topcontent"]/h1/span
+  description: //div[@class="highlights"]
+  price: //div[@class="price_value"]
+  quantity: //div[@class="totalcount"]
+  deal_url: //div[@class="clsbord"]/a
+  discount: //div[@class="clsdiscount_prices"][2]/span
+  expriry: //div[@class="viraiterbg"]/div
+  author: Halo Halo Deals
+  scrape_time: '10:45'
+  scraping: false
+lucky7:
+  site_url: http://www.lucky7.ph/
+  parent_container: //div[@class="mainwhitebox-mid"]
+  title: //div[@class="margtop30"]/b
+  description: //div[@class="dealtitle"]
+  price: //div[@class="price"]
+  quantity: //div[@class="quantity-box-left"]/span
+  discount: //div[@class="discbox"]
+  deal_thumb: //div[@class="dealboxright"]/img
+  expiry: //div[@class="timerbox"]
+  location: //div[@class="margtop20"]
+  url_parent: //div[@class="sidedealbox-mid"]
+  deal_url: //div/a
+  author: Lucky 7
+  scrape_script: get_lucky_7.rb
+  scraping: false
+  scrape_time: '10:45'
+tcat:
+  site_url: http://tcat.com.ph/
+  parent_container: //ul[@class="deals-list"]/li
+  title: //div[@class="info"]/div/h4/a
+  description: //div[@class="info"]/div/p
+  price: //span[@class="price2"]
+  discount: //p[@class="deal-percent"]/strong
+  deal_url: //a[@class="buy"]
+  url_parent: //div[@id="deal-default"]
+  quantity: //p[@class="deal-buy-tip-top"]/strong
+  deal_thumb: //div[@class="deal-buy-cover-img"]/img
+  expiry: //div[@id="deal-timeleft"]
+  author: Tcat
+  scrape_script: get_tcat.com.ph.rb
+  scraping: false
+  scrape_time: '10:45'
+dealspot:
+  site_url: http://dealspot.ph
+  parent_container: //div[@class="dealbox"]
+  description: //div[@class="title"]/strong/a
+  price: //div[@class="price"]
+  discount: //div[@class="save-ribbon"]/span
+  deal_url: //div[@class="title"]/strong/a
+  quantity: //div[@class="bought"]
+  deal_thumb: //div[@class="image"]/a/img
+  expiry_days: //span[@class="timer_days"]
+  expiry_hours: //span[@class="timer_hours"]
+  expiry_minutes: //span[@class="timer_minutes"]
+  url_parent: //div[@class="left-panel"]
+  location: //span[@class="store-location-text"]
+  author: Deal Spot
+  scrape_script: get_dealspot.ph.rb
+  scraping: false
+  scrape_time: '10:45'
+cash_cash_pinoy:
+  site_url: http://www.cashcashpinoy.com/
+  parent_container: //ul[@id="deals_list"]/li
+  title: //div[@class="top-content"]/h2
+  deal_url: //div[@class="img-big"]/a
+  deal_thumb: //div[@class="img-big"]/a/img
+  price: //span[@class="price"]
+  price2: //span[@class="price2"]
+  discount: //span[@class="discount"]
+  discount2: //span[@class="discount2"]
+  url_parent: //div[@class="block-main"]
+  description: //div[@class="top-cnt"]/p
+  quantity: //span[@class="num-bought"]
+  location: //div[@class="qoutes-content"]/p
+  expiry_h: //span[@class="hours hour"]
+  expiry_m: //span[@class="minutes"]
+  expiry_s: //span[@class="seconds"]
+  author: Cash Cash Pinoy
+  scrape_script: get_cashcashpinoy.com.rb
+  scrape_time: '10:45'
+  scraping: false
+kuponan_ph:
+  site_url: http://www.kuponan.ph/all-deals.html
+  parent_container: //li[@class="item"]
+  parent_container_last: //li[@class="item last"]
+  deal_url: //h1[@class="product-name"]/a
+  deal_thumb: //img[@class="lazy"]
+  price: //tr[@id="row-brown"]/td[3]/div/div[2]/span
+  discount: //div[@id="offer-btn"]/span
+  expiry_d: //span[@id="timer_days"]
+  expiry_h: //span[@id="timer_hours"]
+  expiry_m: //span[@id="timer_mins"]
+  expiry_s: //span[@id="timer_seconds"]
+  url_parent: //div[@class="col-main"]
+  description: //div[@class="product-name"]/h1
+  title: //div[@class="desc-heading"]/p
+  location: //div[@class="company-address"]/p[2]
+  author: Kuponan PH
+  scrape_script: get_kuponan.ph.rb
+  scrape_time: '10:45'
+  scraping: false
+dealdozen:
+  site_url: http://dealdozen.com/
+  parent_container: //div[@class="golden_dealbox_wrapper"]
+  deal_url: //a[@class="dealdetails"]
+  description: //div[@class="h3-2"]/span
+  deal_thumb: //img[@class="thumbnail"]
+  price: //div[@class="section buy_price"]/div/span
+  original_price: //div[@class="secton_content textfill"]/span
+  url_parent: //div[@id="content_body"]
+  title: //h1[@class="heading"]
+  author: Deal Dozen
+  scrape_script: get_dealdozen.com.rb
+  scraping: true
+  scrape_time: '10:45'
+buyanihan:
+  site_url: http://www.buyanihan.com/
+  parent_container: //div[@class="md_con"]
+  description: //div[@class="d_ttl"]/a
+  price: //div[@class="prc"]
+  original_price: //div[@class="det_col"]/div[2]
+  discount: //div[@class="det_col"]/div[4]
+  deal_url: //div[@class="d_ttl"]/a
+  deal_thumb: //img[@class="d_img"]
+  url_parent: //div[@class="md_con"]
+  title: //div[@class="com_col"]/h1
+  author: Buyanihan
+  scrape_script: get_buyanihan.com.rb
+  scrape_time: '10:45'
+  scraping: true
+gupo:
+  site_url: http://www.gupo.com.ph/
+  parent_container: //div[@class="ModGupoDealsRedirectorC"]/table
+  title: //td[@class="DealsHeading"]/strong
+  description: //td[@class="DealsHeading"]
+  price: //div[@class="DealsPrice"]/span
+  deal_url: //div[@class="DealsPhotos svwp"]/ul/li[1]/a
+  deal_thumb: //div[@class="DealsPhotos svwp"]/ul/li[1]/a/img
+  original_price: //div[@class="DealsSavings"]/table/tr[2]/td[1]
+  discount: //div[@class="DealsSavings"]/table/tr[2]/td[2]
+  author: Gupo
+  scrape_script: get_gupo.com.ph.rb
+  scrape_time: '10:45'
+  scraping: false
+megadeals:
+  site_url: http://www.megadeals.ph/
+  parent_container: //div[contains(@class , "deal_ddiv")]
+  price: //div[@class="no"]
+  original_price: //table[@class="savings_tble"]/tr[2]/td[1]
+  discount: //table[@class="savings_tble"]/tr[2]/td[2]
+  deal_url: //a[@id="itemTitle"]
+  deal_thumb: //div[@class="deal_img"]/a/img
+  url_parent: //div[contains(@class, "column-main")]
+  title: //a[@id="itemTitle"]
+  author: Mega Deals
+  scrape_script: get_megadeals.ph.rb
+  scrape_time: '10:45'
+  scraping: true
+dealstent:
+  site_url: http://www.dealstent.com/
+  parent_container: //div[@class="main_deal_box"]
+  title: //div[@class="heading"]/h2
+  description: //div[@class="heading"]/h1/a
+  deal_url: //div[@class="heading"]/h1/a
+  deal_thumb: //img[1]
+  price: //dd[@class="price"]/span
+  original_price: //dd[@class="value"]/span
+  discount: //dd[@class="dis"]/span
+  author: Deals Tent
+  scrape_script: get_dealstent.com.rb
+  scrape_time: '10:45'
+  scraping: false
+pinoygreatdeals:
+  site_url: http://pinoygreatdeals.com/
+  parent_container: //div[@id="dealAll"]
+  deal_url: //h1/a
+  original_price: //div[@class="realValue"]/div
+  discount: //div[@class="discountPrice"]/div
+  price: //div[@class="price"]/span[@class="blue"]
+  deal_thumb: //div[@class="span-10"]/a/img
+  description: //h1
+  url_parent: //body
+  title: //strong
+  author: Pinoy Great Deals
+  scrape_script: get_pinoygreatdeals.com.rb
+  scraping: true
+  scrape_time: '10:45'
+sulitkeni:
+  site_url: http://sulitkeni.com/
+  parent_container: //div[contains(@class,"seller type-seller status-publish hentry
+    post posts_deals")]
+  title: //h3/a
+  original_price: //li[@class="rate_current_price"]/strong
+  price: //li[@class="rate_our_price"]/strong
+  discount: //li[@class="rate_percentage"]/strong
+  deal_url: //h3/a
+  deal_thumb: //div[@class="product_image "]/a/img
+  url_parent: //div[@class="content_right content_right_inner"]
+  author: Sulitkeni
+  scrape_script: get_sulitkeni.com.rb
+  scrape_time: '10:45'
+  scraping: false

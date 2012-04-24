@@ -1,0 +1,33 @@
+  #container {
+    padding: 40px;
+    background-color: white;
+  }
+  
+  #container p {
+      font-size: 14px;
+  }
+  
+  #container h1 {
+      font-size: 20px;
+  }
+  
+  #table-form {
+    font-size: 14px;
+  }
+  
+  textarea {
+    font-family: Arial;
+    resize: none;
+  }
+  
+  #row-actions {
+    text-align: center;
+  }
+  
+  .td-align-top {
+    vertical-align: top;
+  }
+  
+  font.required {
+    color: red;
+  }

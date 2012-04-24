@@ -1,0 +1,42 @@
+  <%= stylesheet_link_tag 'deal_print.css' %>
+<div id="container">
+  <table>
+    <tr>
+      <td colspan="2"><h1><%= @deal.title %><h1></td>
+    </tr>
+    <tr>
+      <td rowspan="3" id="ad-image-cell"><%= image_tag @deal.deal_thumb, :id => "ad-image" %> </td>
+      <td id="ad-price-cell"><%= @deal.promo %></td>
+    </tr>
+    <tr>
+      <td class="deal-content">
+        <p>
+          <strong>
+            <% if !@deal.merchant_name.blank? %>
+              <%= @deal.merchant_name %>
+            <% elsif !@deal.contact_name.blank? %>
+              <%= @deal.contact_name %>
+            <% else %>
+              <%= @deal.author %>
+            <% end %>
+          </strong><br/>
+          <%= @deal.contact_address %><br/>
+          <%= @deal.contact_number %><br/>
+          <%= @deal.contact_url %><br/>
+          <% @deal.deal_locations.each do |loc| %>
+            <%= loc.location_name %><br/>
+          <% end %>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="deal-content">
+        <p>
+          Valid Until <%= @deal.expiry %><br/>
+          Permit <%= @deal.permit %>
+        </p>
+      </td>
+    </tr>
+  </table>
+  
+</div>

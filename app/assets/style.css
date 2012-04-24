@@ -1,0 +1,296 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+body{background: #cecece}
+div#header{font-size: 20px}
+div#footer{font-size: 15px}
+ *= require_self
+ *= require_tree .
+*/
+
+* {
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+
+body {
+    margin: 20px 0 0 0;
+    padding: 0;
+    background: #FFFFFF url(/assets/images/themes/blue/img01.gif) repeat-x;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #203C36;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    display: none;
+}
+
+input, textarea {
+    padding: 2px 5px;
+    border: 1px solid #B8E0D7;
+    font: normal 1em Arial, Helvetica, sans-serif;
+    color: #203C36;
+}
+
+h1, h2, h3 {
+    text-transform: lowercase;
+    color: #203C36;
+}
+
+h1 {
+    letter-spacing: -1px;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+p, ul, ol {
+    margin-bottom: 1.6em;
+    line-height: 180%;
+}
+
+p {
+}
+
+blockquote {
+    font-style: italic;
+}
+
+ul {
+}
+
+ol {
+}
+
+a {
+    color: #7AB9AB;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+small {
+}
+
+hr {
+    display: none;
+}
+
+img {
+    border: none;
+}
+
+img.left {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+img.right {
+    float: left;
+    margin: 0 0 0 15px;
+}
+
+/* Header */
+
+#header {
+    width: 960px;
+    height: 80px;
+    margin: 0 auto;
+    background: url(/assets/images/themes/blue/img02.jpg);
+}
+
+#header h1 {
+    margin: 0;
+    padding: 15px 0 0 20px;
+    letter-spacing: normal;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+#header h1 a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#header h1 a:hover {
+    text-decoration: underline;
+}
+
+#header b {
+    display: block;
+    letter-spacing: -2px;
+    font-size: 2.4em;
+}
+
+/* Search */
+
+#search {
+    float: right;
+    width: 180px;
+    padding-top: 30px;
+}
+
+#searchfield {
+    width: 150px;
+}
+
+#searchsubmit {
+    display: none;
+}
+
+/* Page */
+
+#page {
+    width: 900px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: url(/assets/images/themes/blue/img03.jpg) no-repeat;
+}
+
+/* Content */
+
+#content {
+    float: left;
+    width: 600px;
+}
+
+.post {
+}
+
+.post .date {
+    margin: 0;
+    line-height: normal;
+    font-size: .8em;
+    color: #999999;
+}
+
+.post .title, .post .meta {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font: normal 1.6em "Arial Black", Arial, Helvetica, sans-serif;
+}
+
+.post .title {
+}
+
+.post .meta {
+    padding-left: 10px;
+    color: #DDDDDD;
+}
+
+.post .meta a {
+    color: #DDDDDD;
+}
+
+.post .links {
+    padding: 5px 10px;
+    background: #F8F8F8;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    text-align: right;
+    font-weight: bold;
+}
+
+.post .entry {
+    clear: both;
+    margin-bottom: 50px;
+}
+
+/* Sidebar */
+
+#sidebar {
+    float: right;
+    width: 240px;
+    background: url(/assets/images/themes/blue/img04.jpg) repeat-y;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sidebar li {
+    background: url(/assets/images/themes/blue/img05.jpg) no-repeat;
+}
+
+#sidebar li ul {
+    padding: 20px 20px 60px 20px;
+    background: url(/assets/images/themes/blue/img06.jpg) no-repeat left bottom;
+}
+
+#sidebar li li {
+    padding: 0;
+    background: url(/assets/images/themes/blue/spacer.gif);
+    color: #FFFFFF;
+}
+
+#sidebar h2 {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    text-transform: uppercase;
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    color: #FFFFFF;
+}
+
+#sidebar a {
+    color: #FFFFFF;
+}
+
+/* Footer */
+
+#footer {
+    clear: both;
+    padding: 40px 0;
+    background: #696B60 url(images/img07.gif) repeat-x;
+}
+
+#footer p {
+    margin: 0;
+    text-align: center;
+    color: #999999;
+}
+
+#footer a {
+    color: #999999;
+}
+
+#footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
+

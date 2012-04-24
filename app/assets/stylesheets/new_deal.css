@@ -1,0 +1,234 @@
+#page-contents {
+    background-color: #FFFFFF;
+}
+
+.side {
+  float: right;
+  position: relative;
+}
+
+#div-left {
+  /*float: left;*/
+}
+
+#div-right {
+   text-align: left;
+  /*float:right;*/
+}
+
+#div-top {
+  height:100%;
+  text-align: center;
+  position: relative;
+  top: -5px;
+}
+
+#div-add-location {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#div-form-contents {
+    padding: 0px 40px 40px 40px;
+    font-size:14px;
+    text-align: left;
+}
+
+#h3-add-location {
+  text-align: left;
+}
+
+#div-bottom {
+  height:100%;
+  text-align: center;
+  position: relative;
+  top: 5px;
+  margin-bottom: 25px;
+}
+
+.tbl-form th {
+  text-align: center;
+}
+
+table {
+
+}
+
+.tbl-form {
+    width: 100%;
+    text-align: justify;
+    /*margin-left: auto;*/
+    margin-right: auto;
+    padding: 0px 5px 0px 5px;
+}
+
+.tbl-form td {
+  padding: 2px;
+
+}
+
+#div-container {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+#link-back {
+  background-color: transparent; 
+}
+
+#map_container {
+  height: 500px; 
+  width: 100%;
+}
+
+.infowindow{
+  resize:none;
+  border: none;
+  height: 90px;
+  width: 300px;
+  overflow: hidden;
+  font-size: 1em
+}
+
+textarea {
+  resize: none;
+  width: 80%;
+  font: 1em Arial;
+}
+
+#deal_description{
+  height: 150px;
+}
+
+#txt-input{
+  width: 100%;
+}    
+
+input[type="text"] {
+  width: 60%;
+}
+
+#td-deal-location {
+  width:30%;
+}
+
+font.required {
+  color: red;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #cccccc; background: #f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #1c94c4; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #1c94c4; text-decoration: none; }
+.ui-widget-header { border: 1px solid #4297D7; background: #4297D7 url(/assets/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+.ui-widget-header a { color: #ffffff; }
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+div.ui-datepicker{
+ font-size:14px;
+}
+
+#error_explanation {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  font-size: 10px;
+  color: red;
+}
+
+#error_explanation ul {
+  text-align: left;
+  width:30%;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+input[type="file"] {
+  width: 60%;
+  border: 1px solid gray;
+}
+
+#tbl-instructions{
+  border: 1px solid gray;
+  width: 80%;
+  font: .9em Arial;
+}
+
+#tbl-instructions td {
+  padding: 15px;
+  vertical-align: text-top;
+}
+
+.col1 {
+  font-style: italic;
+}
+
+#tbl-instructions th {
+  text-align: center;
+  font-style: normal;
+}
+
+#p-instructions {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+#font-instructions {
+  cursor: pointer;      
+  color: #3E7BC5;
+}
+
+#list-instructions {
+  z-index: 100;
+  position: absolute;
+  width: 25%;
+  display: none;
+  text-align: left;
+  background-color: white;
+  border:2px solid #3E7BC5;
+  border-radius:5px;
+  -moz-border-radius:5px; /* Firefox 3.6 and earlier */
+}
+
+#div-top h3 {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.alt {
+    background-color: #F6F7F8;
+}
+
+#add-another-image-label{
+    vertical-align: top;
+}
+
+#add-another-image-label a {
+    font-size: small;
+    cursor: pointer;
+    color: #3E7BC5;
+}
+
+#remove-last-image {
+    display:none;
+
+}
+
+#cell-images{
+    width:100%;
+}
+
+#thumbnail {
+    height: 100px;
+    width: 100px;
+    border: dotted 1px #000000;
+}

@@ -1,0 +1,167 @@
+<%= javascript_tag do %>
+  var deal_locations = <%= @deal.deal_locations.to_json.html_safe %>
+    var deal_images = new Array();
+<% end %>
+  
+<%= content_for :scripts do %>
+  <%= javascript_include_tag "_deal_new.js", "application" %>
+<%end%>
+  
+
+<%= form_for(@deal) do |f| %>
+
+
+  <div id="div-form-contents">
+    
+    <div id="div-left">
+      <p id="notice"></p>
+      
+      <% if @result.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@result.count, "error") %> prohibited this deal from being saved:</h2>
+
+          <ul>
+            <% @result.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %> 
+      <table class="tbl-form" >        
+        <tr>
+          <td width="20%"><%= f.label :title, "Title/Short Description"%> <font class="required" title="This is a required field">*</font></td>
+          <td><%= f.text_field :title,
+                 :onkeyup => "limitField(this, 255)", 
+                 :placeholder => "e.g. Curtains and Trims 30% off " %></td>
+        </tr>
+        <tr class="alt">
+          <td><%= f.label :expiry, "Date of Expiry" %> <font class="required" title="This is a required field">*</font></td>
+          <td><%= f.text_field :expiry, :readonly=>"readonly" %> </td>
+        </tr>
+        <tr>
+          <td><%= f.label :original_price, "Original Price (Php)" %> <font class="required" title="This is a required field">*</font></td>
+          <td><%= f.text_field :original_price,
+                 :onkeyup => "handlePrice(this)",
+                 :onkeydown => "return isPrice(event)",
+                 :placeholder => "e.g. 99.99" %>
+          </td>
+        </tr>
+        <tr class="alt">
+          <td><%= f.label :price, "Discounted Price (Php)" %> <font class="required" title="This is a required field">*</font></td>
+          <td><%= f.text_field :price,
+                 :onkeyup => "handlePrice(this)",
+                 :onkeydown => "return isPrice(event)",
+                 :placeholder => "e.g. 99.99" %>
+          </td>
+        </tr>
+        <tr>
+          <td><%= f.label :discount, "Discount %" %></td>
+          <td><%= f.text_field :discount,
+                 :readonly => "readonly"%>
+          </td>
+        </tr>
+        <tr class="alt">
+          <td><%= f.label :deal_url, "Deal URL" %> <font class="required" title="This is a required field">*</font></td>
+          <td><%= f.text_field :deal_url,
+                 :onkeyup => "limitField(this, 255)",
+                 :placeholder => "e.g http://www.example.com" %></font>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><%= f.label :deal_thumb, "Deal Thumbnail URL" %> <font class="required" title="This is a required field">*</font></td>
+          <td>
+              <%= f.text_field :deal_thumb,
+                 :onkeyup => "limitField(this, 255)",
+                 :placeholder => "e.g http://www.example.com/example.jpg" %>
+            <div><img id="thumbnail" default="/assets/default_deal.gif" src="/assets/default_deal.gif" alt="Default deal image"/> </div>
+          </td>
+        </tr>
+        <tr class="alt">
+          <td><%= f.label :rss_deal_id, "RSS URL" %></td>
+          <td><%= f.text_field :rss_deal_id,
+                 :onkeyup => "limitField(this, 255)",
+                 :placeholder => "e.g. http://www.example.com/rss" %>
+          </td>
+        </tr>
+        <tr>
+          <td><%= f.label :merchant_name, "Store Name" %> </td>
+          <td><%= f.text_field :merchant_name,
+                  :onkeyup => "limitField(this, 255)",
+                 :placeholder => "e.g. Curtains and Trims" %></td>
+        </tr>
+        <tr class="alt">
+          <td><%= f.label :contact_name, "Contact Person" %> </td>
+          <td><%= f.text_field :contact_name,
+                  :onkeyup => "limitField(this, 255)",
+                  :placeholder => "e.g. Juan dela Cruz" %></td>
+        </tr>
+        <tr>
+          <td><%= f.label :contact_number, "Contact Number" %> </td>
+          <td><%= f.text_field :contact_number,
+                  :onkeyup => "limitField(this, 255)",
+                  :placeholder => "e.g. 098-765-4321" %></td>
+        </tr>
+        <tr class="alt">
+          <td><%= f.label :contact_email, "Contact Email" %> </td>
+          <td><%= f.text_field :contact_email,
+                  :onkeyup => "limitField(this, 255)",
+                  :placeholder => "e.g. jdcruz@dealpinas.com" %></td>
+        </tr>
+        <tr>
+          <td><%= f.label :contact_address, "Contact Address" %> </td>
+          <td><%= f.text_field :contact_address,
+                  :onkeyup => "limitField(this, 255)",
+                  :placeholder => "612 Kantong Kalye Street, Makati City" %></td>
+        </tr>
+        <tr class="alt">
+          <td><%= f.label :contact_url, "Contact URL" %> </td>
+          <td><%= f.text_field :contact_url,
+                  :onkeyup => "limitField(this, 255)",
+                  :placeholder => "http://www.example.com/jdcruz" %></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: text-top"><%= f.label "Categories" %></td>
+          <td>
+            <% @category.each do |cat| %>
+              <%  check = false %>
+              <%  @deal.deal_category_mappings.each do |dcm|%>
+                <% if cat.category_id == dcm.category_id %>
+                  <% check = true %>
+                <% end %>
+              <% end %>
+              <%= check_box_tag "cat_ids[#{cat.category_id}]",cat.category_id, checked = check, :name => "deal[cat_ids][]" %><%= cat.category_name %><br/>
+            <% end %>
+          </td>
+        </tr>
+        <tr class="alt">
+          <td style="vertical-align: top;"><%= f.label :description, "Full Description" %> <font class="required"  title="This is a required field">*</font></td>
+          <td><%= f.text_area :description %></td>
+        </tr>
+        <tr>
+          <td>
+            Deal Locations<br/>
+            <font id="font-instructions">Show Help</font>
+            <div id="list-instructions">
+              <ul>
+                <li>Click anywhere in the map to add a location</li>
+                <li>Right-click on a marker to remove a location</li>
+                <li>Click on a marker to edit location name</li>
+                <li>Drag markers to reposition them on the map</li>
+              </ul>
+            </div>
+          </td>
+
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div id="map_container"></div>
+          </td>
+        </tr>
+      </table>
+    </div><!--div-left-->
+  </div>
+
+<div id="div-hidden"><%= f.hidden_field :reviewed, :value => true%></div>
+
+<div id="div-bottom" class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><%= f.submit :onclick => "return validateForm()"%><%=  submit_tag "Cancel", :type=>"button", :onclick => "window.location = '/'" %></div>
+<% end %>

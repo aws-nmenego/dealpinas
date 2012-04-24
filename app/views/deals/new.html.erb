@@ -1,0 +1,39 @@
+<%= content_for :head do%>
+    
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <%= javascript_include_tag 'jquery-1.7.1.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.8.18.min.js' %>
+  <%= javascript_include_tag 'jquery.ui.widget.js' %>
+  <%= javascript_include_tag 'jquery-ui-timepicker-addon.js' %>
+  <%= stylesheet_link_tag 'jquery.ui.all.css' %>
+  <%= stylesheet_link_tag 'new_deal.css' %>
+
+<%end%>
+
+  
+<div id="page-contents">
+  <p></p>
+  <span id="div-container">
+    <% if @deal.is_ad != true %>
+      <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all" id="div-top">
+        <h3>Deal Details</h3>
+      </div>
+      <p id="p-instructions">
+        Please specify the following details below to add a deal.
+        <br/>Please note that the deal you add is subject to review by the DealPinas administrators.
+        <br/>You may also import deals using XML from your site in <a href="/deals/import">this link</a>.
+      </p>
+    <% else %>
+      <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all" id="div-top">
+        <h3>Advertisement Details</h3>
+      </div>
+    <%  end %>    
+  <% if @deal.is_ad == true   %>
+    <%= render 'ad_form' %>
+  <% else %>
+    <%= render 'form' %>
+  <% end %>
+
+  </span>
+
+</div>

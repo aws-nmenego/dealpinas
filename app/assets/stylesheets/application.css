@@ -1,0 +1,388 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+ div#tabs { width: 74%; height: auto; min-height: 200px; margin-top: 20px}
+ div#search_div {width: 23%; height: auto; min-height: 200px; margin-top: 20px; background: #F3F3F3; opacity: .5}
+
+ html { background: url(city.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;}
+ body  { margin-top: 0px; margin-left:10%; margin-right:10%; background: none; font-family:"Century Gothic"; font-size: small }
+ div#header { font-size: large; color: #FFFFFF; height: 90px; width: 100%; background: #403C3A; font-size: xx-large; line-height:80px; padding-left: 5px; border-bottom: 2px solid #555555}
+ div#footer { font-size: small; color: #0033CC; background: #AAAAAA; margin-top: 20px; padding:5px;}
+
+ div.div_spacer {width: 2%; background: none; float: left}
+ div#nav_deal {position: relative; top: -270px; left: 70%; padding:5px; text-align: center; width:100px; background: #0033CC; border:#0033CC 1px solid; color: #F3F3F3; font-size: large; -moz-border-radius: 1px; }
+ div#nav_deal a {color: #F3F3F3; text-decoration: none}
+ div.banner{ background: none; width: 100%; height:80px; margin:0px; text-align: center; font-size: 2.5em; color: #D3D3D3; line-height: 70px}
+ textarea{ height: 70px}
+
+ * require_self
+ * require_tree .
+*/
+
+html{
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+    
+
+body {
+    margin: 0;
+    font-family: Arial;
+/*    margin: 20px 0 0 0;*/
+    padding: 0;
+    background: fixed #FFFFFF url(/assets/boracay.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#main_content {
+    background: black;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    display: none;
+}
+
+h1 {
+    letter-spacing: -1px;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+p, ul, ol {
+    margin-bottom: 1.6em;
+    line-height: 180%;
+}
+
+p {
+}
+
+blockquote {
+    font-style: italic;
+}
+
+ul {
+}
+
+ol {
+}
+/*
+a:active {
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}*/
+
+small {
+    font-size: smaller;
+}
+
+small a {
+    color: red;
+}
+
+small a:hover{
+    text-decoration: underline;
+    color: #6633CC;
+}
+
+hr {
+    display: none;
+}
+
+img {
+    border: none;
+}
+
+img.left {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+img.right {
+    float: left;
+    margin: 0 0 0 15px;
+}
+
+/* Header */
+
+#header {
+    width: 1024px;
+    height: 72px;
+    position: relative;
+}
+
+.header {
+    width: 1024px;
+    height: 72px;
+    position: relative;
+}
+
+#header h1 {
+    margin: 0;
+    letter-spacing: normal;
+    font-size: 1em;
+    
+    /*color*/
+    color: #043c6b;
+/*    color: #FFFFFF;*/
+}
+
+#header h1 a {
+    text-decoration: none;
+    
+    /*color*/
+    color: #043c6b;
+/*    color: #FFFFFF;*/
+}
+
+#header h1 a:hover {
+    text-decoration: underline;
+}
+
+#header b {
+    display: inline;
+/*    letter-spacing: -2px;*/
+    font-size: 2.4em;
+}
+
+/* Search */
+
+#search {
+    float: right;
+    width: 180px;
+    padding-top: 30px;
+}
+
+#searchfield {
+    width: 150px;
+}
+
+#searchsubmit {
+    display: none;
+}
+
+/* Page */
+
+#page {
+    width: 1024px;
+    margin: 0 auto;
+    /*padding: 20px 30px;
+    background: url(themes/blue/img03.jpg) no-repeat;*/
+}
+
+/* Content */
+
+#content {
+    float: left;
+    width: 600px;
+}
+
+.post {
+}
+
+.post .date {
+    margin: 0;
+    line-height: normal;
+    font-size: .8em;
+    color: #999999;
+}
+
+.post .title, .post .meta {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font: normal 1.6em "Arial Black", Arial, Helvetica, sans-serif;
+}
+
+.post .title {
+}
+
+.post .meta {
+    padding-left: 10px;
+    color: #DDDDDD;
+}
+
+.post .meta a {
+    color: #DDDDDD;
+}
+
+.post .links {
+    padding: 5px 10px;
+    background: #F8F8F8;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    text-align: right;
+    font-weight: bold;
+}
+
+.post .entry {
+    clear: both;
+    margin-bottom: 50px;
+}
+
+/* Sidebar */
+
+#sidebar {
+    float: left;
+    min-height: 500px;
+    position: inherit;
+/*    border-radius: 5px;*/
+/*    background-color: #9FBDCE;*/
+}
+
+.sidebar-head {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    -webkit-border-image: -webkit-gradient(linear, left , right, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00)) 21 30 30 21 repeat repeat;
+    padding-bottom: 10px;
+    border: #00abeb;
+    border-radius: 5px;
+    position:relative;
+}
+
+/*.sidebar-head {
+    position: relative;
+    padding: 20px;
+    border: 3px solid transparent;
+    border-top-color: #000;
+}
+
+.sidebar-head:before,
+.sidebar-head:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    width: 5px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF9200), to(transparent));
+    background-image: -webkit-linear-gradient(#FF9200, transparent);
+    background-image: -moz-linear-gradient(#FF9200, transparent);
+    background-image: -o-linear-gradient(#FF9200, transparent);
+    background-image: linear-gradient(#FF9200, transparent);
+}*/
+
+
+.sidebar-body {
+    
+}
+
+.sidebar-container {
+    
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sidebar li {
+    background: url(themes/blue/img05.jpg) no-repeat;
+}
+
+#sidebar li ul {
+    padding: 20px 20px 60px 20px;
+    background: url(themes/blue/img06.jpg) no-repeat left bottom;
+}
+
+#sidebar li li {
+    padding: 0;
+    background: url(themes/blue/spacer.gif);
+    color: #FFFFFF;
+}
+
+#sidebar h2 {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    text-transform: uppercase;
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    color: #FFFFFF;
+}
+
+#sidebar a {
+    color: #FFFFFF;
+}
+
+/* Footer */
+
+#footer {
+    clear: both;
+    height: 20px;
+/*    background: #696B60 url(themes/blue/img07.gif) repeat-x;*/
+    bottom: 0px;
+/*    position: fixed;*/
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+}
+
+
+#footer a:link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+#footer a:active{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+#footer a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+#footer a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+    background-color: black;
+}
+
+theme-text {
+    color: #0F4FA8;
+    font-size: large
+}
+
+a:hover {background:#ffffff; text-decoration:none;} /*BG color is a must for IE6*/
+a.tooltip span {display:none; padding:2px 3px; margin-left:8px; width:130px;}
+a.tooltip:hover span{display:inline; position:absolute; background:#ffffff; border:1px solid #cccccc; color:#6c6c6c;}

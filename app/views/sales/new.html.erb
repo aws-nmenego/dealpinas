@@ -1,0 +1,9 @@
+<h1>New sale</h1>
+Price per Unit: <%= ActiveRecordHelper.round_to_decimal @deal.price, 2 %>
+<br/><br/>
+Available: <%= @deal.quantity %>
+<br/><br/>
+<%= render 'form' %>
+
+<%= link_to 'Back', sales_path %>
+<br/><br/>

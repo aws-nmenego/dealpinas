@@ -1,0 +1,113 @@
+<%= content_for :head do%>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <%= javascript_include_tag 'jquery-1.7.1.js' %>
+  <%= javascript_include_tag '_deal_show.js' %>
+
+  <%= javascript_tag do %>
+    var deal_locations = <%= @deal.deal_locations.to_json.html_safe %>
+  <% end %>
+  
+  
+  <%= stylesheet_link_tag 'new_deal.css' %>
+  <%= stylesheet_link_tag 'deal_show.css' %>
+<%end%>
+<div id="page-contents">
+<p></p>
+<span id="div-container">
+<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all" id="div-top">
+  <h3>Advertisement</h3>
+</div>
+<div id="div-ads-content">
+
+  <font id="title">
+    <%= @deal.title %>
+  </font>
+  <table>
+    <tr>
+      <td rowspan="4" id="ad-image-cell"><%= image_tag @deal.deal_thumb, :id => "ad-image" %> </td>
+      <td id="ad-price-cell"><%= @deal.promo %></td>
+    </tr>
+    <tr>
+      <td>
+        <table id="tbl-share">
+          <tr>
+            <td><strong>Offered by:</strong> <br/>
+              <% if !@deal.merchant_name.blank? %>
+                <%= @deal.merchant_name %>
+              <% elsif !@deal.contact_name.blank? %>
+                <%= @deal.contact_name %>
+              <% else %>
+                <%= @deal.author %>
+              <% end %>            
+            </td>
+            <td><strong>Share us:</strong> <!-- AddThis Button BEGIN -->
+              <div class="addthis_toolbox addthis_default_style ">
+                <a class="addthis_button_preferred_1"></a>
+                <a class="addthis_button_preferred_2"></a>
+                <a class="addthis_button_preferred_3"></a>
+                <a class="addthis_button_preferred_4"></a>
+                <a class="addthis_button_compact"></a>
+                <a class="addthis_counter addthis_bubble_style"></a>
+              </div>
+              <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f8e2a07775e0a49"></script>
+              <!-- AddThis Button END -->
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <% if @deal.support_print %>
+    <tr>
+      <td>
+        <%=link_to (image_tag "/assets/print_coupon.png", :id=>"print-coupon", :class => "default"), 
+          print_deal_path(@deal),  
+          {:id => "view-deal", :target => "_blank"}%> 
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+  <h3>Description</h3>
+  <hr style="display: block">
+  <div id="ad-description-container">
+    <p>
+      <%= @deal.description %><br/><br/>
+      <% if !@deal.images.blank? %>
+        <% @deal.images.each do |img| %>
+          <%= image_tag img.url, :class => "ad-image"%><br/>
+          <%= img.description %><br/><br/>
+        <% end %>
+        <br/>
+      <% end %>
+      <br/><strong>Valid Until: </strong><%=  time_tag @deal.expiry.to_date %>
+      <br/><strong>Permit #: </strong><%= @deal.permit %>
+    </p>
+  </div>
+  
+  <h3>Merchant Information</h3>
+  <hr style="display: block">
+  <div id="ad-contact-container">
+    <div id="map_container"></div><br/>
+    <ul id="ad-contact-info">
+      <li><strong>Store Name: </strong><%= @deal.merchant_name %></li>
+      <li><strong>Contact Person: </strong><%= @deal.contact_name %></li>
+      <li><strong>Contact Number: </strong><%= @deal.contact_number %></li>
+      <li><strong>Email: </strong><%= @deal.contact_email %></li>
+      <li><strong>Address: </strong><%= @deal.contact_address %></li>
+      <li><strong>Website: </strong><%= @deal.contact_url %></li>
+      <% if !@deal.deal_locations.nil? %>
+      <li><strong>Advertisement Locations: </strong></li>
+        <% @deal.deal_locations.each do |loc| %>
+        <li><%= loc.location_name %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
+<div id="div-bottom" class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+<%=  submit_tag "Back", :type=>"button", :onclick => "window.location = '/'" %>
+</div>
+</span>
+</div>

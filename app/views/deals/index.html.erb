@@ -1,0 +1,382 @@
+<%= content_for :head do%>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript">
+    var offset = 0;
+    var limit = <%=@limit %>
+    var currentMax = 30 , currentMaxIncrement = 50;
+    
+    var user = new Object();
+    user.isAdmin = <%= @is_admin %>;
+    user.username = '<%= @username %>';
+    var authors = <%= raw(@deal_sites) %>;
+    var focusedDeal = <%= @focus_deal %>;
+  </script>
+  <%= javascript_include_tag 'jquery.js' %>
+  <%= javascript_include_tag 'jquery.corner.js' %>
+  <%= stylesheet_link_tag 'deal.css.scss' %>
+  <%= javascript_include_tag '_info_bubble.js' %>
+<%end%>
+
+<%= content_for :scripts do %>
+  <%= javascript_include_tag "_deals.js", "application" %>
+<%end%>
+
+<%= content_for :header_display do %>
+  <div style="position: relative;bottom:0px;padding-top: 30px;text-align: right">
+
+    <%if !user_signed_in? %>
+      <small>
+        <error><%flash[:error] ? flash[:error] : ''%></error>
+        <%= form_for(:session, :url => sessions_path) do |f| %>
+          <%= f.label :email %>:&nbsp;
+          <%= f.email_field :email , :class=>'header_text_field' , :size=>'10' , :required=>'true' %>
+
+          <%= f.label :password %>:&nbsp;
+          <%= f.password_field :password , :class => 'header_text_field' , :size=>'10' , :required=>'true' %>
+          <%= f.submit "Sign in" %>
+        <%end%>
+        New user? <%= link_to "Sign up now!", signup_path  %>
+      </small>
+    <% else  %>
+      Welcome <theme-text><%current_site_user.first_name%>&nbsp;<%= current_site_user.last_name %></theme-text><br/>
+      <%= link_to "Log out", '/signout' %>
+    <% end %>
+  </div>
+<%  end %>
+
+  <div id="white-line"
+      style="
+       height: 0.3px;
+       border-bottom: white thin solid;
+       background-color: white;
+       "></div>  
+  
+<div style="
+     background-color: black;
+     ">
+  <table style="width: 100%;border-spacing: 0">
+    <tr>
+      <td align="left" valign="top" style="width: 209px;">
+        <div id="sidebar-mask" 
+             style="
+             min-height:500px;
+             padding: 10px 0 1px 10px;
+             display:none
+             "></div>
+        <div id="sidebar" style="
+             width:190px;
+             min-height:500px;
+             padding: 10px 0 1px 10px;
+             ">
+          <div id="sidebar-top" style="
+               background-color: white;
+               padding: 10px 0 1px 10px;
+               margin: 0 0 5px 0;
+               ">
+            <div class="sidebar-top" style="
+                 font:20px Arial;
+                 ">
+              <b>Find great deals!</b>
+            </div>
+            <table class="sidebar-top">
+              <tr valign="bottom">
+                <td>
+                  <div style="font:16px Arial;">
+                    <b>What?&nbsp;&nbsp;</b>
+                    <input id="specific-text-field" type="textbox" 
+                           onKeyPress="textfieldEventListener(event,'specific-text-field',null)" 
+                           style="width:95px;"
+                           />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="font:16px Arial;display: inline">
+                    <b>Where?&nbsp;&nbsp;</b>
+                    <input id="location-text-field" type="textbox" 
+                           onKeyPress="textfieldEventListener(event,'location-text-field')" 
+                           style="width:85px;"
+                           />
+                  </div>  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="font:4px Arial;"><br/></div>  
+                </td>
+              </tr>
+            </table>
+
+            <div class="sidebar-top" 
+                 style="
+                 margin: 0 0 10px 0;
+                 height: 100%;
+                 overflow: hidden;
+                 ">
+              <a onclick="findDeals()" id="lets_go_button"
+                 style="
+                 cursor: pointer;
+                 width:87px;
+                 height: 33px;
+                 position:relative
+                 ">
+                <img class="rollover" width="110"   src="/assets/images/lets_go_rollover.png" style="display:none;"/>
+                <img class="default" width="110"  src="/assets/images/lets_go.png" style="display:block;"/>
+              </a>
+            </div>
+          </div>
+
+          <div id="sidebar-bottom" style="
+               background-color: white;
+               padding: 0 0 0 10px;
+               margin: 15px 0 0 0;
+               ">
+            <div style="
+                 padding: 10px 0 0 0;
+                 ">
+              <font size="3" face="Arial">
+              <b>Category</b>
+              <br/>
+              </font>
+              <font size="2" face="Arial">
+              <form id="categories">
+                <%= radio_button "category" , "category_name" , '%'  , :checked => true , :onclick=>'applyFilter()'%>&nbsp;All&nbsp;Deals<br/>
+                <% @categories.each do |category| %>
+                  <%=radio_button "category", "category_name", category.category_name , :onclick=>'applyFilter()' %>&nbsp;<%=category.category_name%><br/>
+                <%end%>
+              </form>
+              </font><br/>
+            </div>
+            <div>
+              <font size="3" face="Arial"><b>Type</b><br/></font>
+              <font size="2" face="Arial">
+              <form id="types">
+                <%= radio_button "type" , "type_name" , '%'  , :checked => true , :onclick=>'applyFilter()'%>&nbsp;All<br/>
+                <%= radio_button "type" , "type_name" , 'new'  , :onclick=>'applyFilter()'%>&nbsp;New&nbsp;Stuff<br/>
+                <%= radio_button "type" , "type_name" , 'ad'  , :onclick=>'applyFilter()'%>&nbsp;Ads<br/>
+              </form>
+              </font><br />
+            </div>
+          </div>
+        </div>
+      </td>
+
+      <td align="left" valign="top" 
+          style="padding: 0 10px 0 0">
+        <div id="tabs" class="tabs" style="width:100%;margin-top:5px">
+          <ul>
+            <li><a id="link_to_tab_one" href="#tab_one" onclick="prepareTabOne()" 
+                   style="
+                    background-color: black;
+                    margin: 3px 0 0 0;
+                   ">
+                <img class="tab_active" src="/assets/images/map_view_active.png" width="100"/>
+                <img class="tab_not_active" src="/assets/images/map_view_not_active.png" width="100" 
+                     style="
+                     display: none;
+                     "/>
+              </a></li>
+            <li><a id="link_to_tab_two" href="#tab_two"  onclick="prepareTabTwo()" 
+                   style="
+                    background-color: black;
+                    margin: 3px 0 0 0;
+                   ">
+                <img class="tab_active" src="/assets/images/list_view_active.png" width="100"style="
+                     display: none;
+                     "/>
+                <img class="tab_not_active" src="/assets/images/list_view_not_active.png" width="100"/>
+              </a></li>
+          </ul>
+          <div id="tab_one"  style="height:500px;margin-top: 2px;">
+            <div id="map_container" style="height:500px"></div>
+          </div>
+          <div id="tab_two" style="margin-top: 2px;">
+            <div id="deals_wrapper"></div>
+            <div id="show-me-the-deals" style="height:2px;"></div>
+            <div id="list-load" style="
+                 width:100%;
+                 background: black;
+                 text-align: center;
+                 height: 30px;
+                 margin-top: 25px;">
+              <img src="assets/images/loading.gif" width="25" height="25"/>
+            </div>
+            <div id="list-load-more" style="
+                 width:100%;
+                 background: white;
+                 height: 20px;
+                 display:none;
+                 text-align:center;
+                 border: #AFAFAF solid;
+                 background-color: #B9B9B9 ;
+                 ">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a>
+                <b>
+                  More Deals
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <img src="/assets/images/arrow_down.png" height="12" width="20" />
+                </b>
+              </a>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <style>
+    #list-load-more a{
+      cursor: pointer;
+      color:black;
+      background-color: #B9B9B9 ;
+    }
+    #list-load-more a:hover{
+      cursor: pointer;
+      color: #4da7db;
+      background-color: #B9B9B9 ;
+    }
+  </style>
+
+  <div id="deal_information_container" 
+       style="
+       clear: both;
+       position:relative;
+       display: none;
+       margin-top: 10px;
+       background: black;
+       padding: 0 10px 0 10px;
+       ">
+    <div id="loading-div" 
+         style="
+         width: 100%;
+         opacity: 0.5;
+         position: absolute;
+         background: white;
+         text-align: center;
+         height: 140px;
+        position: absolute;
+         ">
+      <img id='loading-image' src="assets/images/loading.gif" width="50" height="50"
+           style="top:50%;position:relative"/>
+    </div>
+
+    <table style="
+           width:100%;
+           height:100%;
+           border: none;
+           background: white;
+           " id="deal_container">
+      <tr>
+        <td align="left" valign="center" id="deal_prev" onclick="previousDeal()" style="cursor: pointer;height:40px;">
+          <img src="assets/images/previous.png" width="40" height="100" style="position:relative;opacity:0.5"/>
+        </td>
+
+        <td align="left" valign="center" style="width:170px;">
+          <a id="deal_image" href="http://www.google.com" target="_blank">
+            <img border="0" width="170px" height="100px"/>
+          </a>
+        </td>
+
+        <td align="left" valign="center" style="width:55%">
+          <div style="margin-top: -3px">
+            <font size="5" face="Arial">
+            <b id="dealStore">
+              <b id="deal_title"></b>
+            </b>
+            </font><br/>
+
+            <font size="4" face="Arial" color="#528fcd">
+            <b id="dealDesc">
+              <b id="deal_offer"></b>
+            </b>
+            </font><br/>
+
+            <font size="3" face="Arial" color="black" class="dealAddress">
+            <a id="deal_location"></a>
+            <a id="linkToLocation"></a>
+            </font>
+          </div>
+        </td> 
+
+        <td align="center" valign="center" >
+          <font size="5" face="Arial" color="red">
+          <b>
+            <b id="deal_discount"></b>
+          </b>
+          </font>
+          <div style="margin-top: -5px;margin-bottom: 8px;">
+            <font size="2" face="Arial" color="gray" id="dealBy">
+            <i>
+              <a id="deal_author"></a>  
+            </i>
+            </font>
+          </div>
+          <font size="4" face="Arial"><b>
+            <a id="deal_external_link" class="deal_link">
+              View Deal
+            </a></b></font>
+        </td>
+
+
+        <td align="left" valign="center" id="deal_next" onclick="nextDeal()" style="cursor:pointer;height:40px" >
+          <img src="assets/images/next.png" width="40" height="100" style="position:relative;opacity:0.5"/>
+        </td>
+
+      </tr>
+    </table>
+
+  </div>
+  <div id="keyword-links"
+       style="
+       background-color: white;
+       margin: 10px 10px 3px 10px;
+       "></div>
+  <style>
+    div.list{
+      font-size: 0.75em; 
+    }
+    div.list ul {
+      margin: 0; 
+      padding: 0;
+      line-height: 150%;
+      list-style-type: none;
+    }
+    div.list ul li {
+      margin:0; 
+      padding: 0;
+      width: 145px;
+    }
+    div.list a:visited {
+      text-decoration: none; 
+      color: black;
+    }
+    div.list a:hover {
+      text-decoration: underline; 
+      color: black;
+    }
+    div.list a:link {
+      text-decoration: none; 
+      color: black;
+    }
+    div.list a:active {
+      text-decoration: none; 
+      color: black;
+    }
+  </style>
+
+
+  <div id="popup" class="popup">
+  </div>
+  <style>
+    .popup {
+      position:absolute;
+      border: black solid 1px;
+      background: white;
+      display: none;
+      padding: 3px 3px 3px 3px;
+    }
+  </style>
+</div>
+  

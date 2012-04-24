@@ -1,0 +1,3 @@
+module DealHelper
+  
+end

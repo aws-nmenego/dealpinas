@@ -1,0 +1,69 @@
+<deals>
+	<deal>
+		<title>PHP 300 For Premium Threadless Led Zeppelin Shirt from Juan's Shirt Shop</title>
+		<description>PHP 300 For Premium Threadless Led Zeppelin Shirt from Juan's Shirt Shop.  Premium Threadless Shirts with Juan's trademark artwork designs.</description>
+		<discounted_price>300</discounted_price>
+		<original_price>500</original_price>
+		<deal_url>http://www.example.com/deal1</deal_url>
+		<deal_thumb>http://www.iana.org/_img/iana-logo-pageheader.png</deal_thumb>
+		<rss_deal_id>http://www.example.com</rss_deal_id>
+		<expiry>2012-04-28 12:00:00</expiry>
+		<locations>
+			<location>
+				<location_name>30th St., 9th Avenue 1630 Taguig City, Philippines</location_name>
+				<latitude>14.552058</latitude>
+				<longitude>121.051408</longitude>
+			</location>
+			<location>
+				<location_name>Yuchengco Tower RCBC Plaza 6819 Ayala Avenue 1226 Makati City, Philippines</location_name>
+				<latitude>14.561082</latitude>
+				<longitude>121.016421</longitude>
+			</location>
+		</locations>
+		<categories>
+			<category>HNB</category>
+			<category>SHO</category>
+		</categories>
+		<merchant_name>Juan's Shirt Shop</merchant_name>
+		<contact_name>Juan dela Cruz</contact_name>
+		<contact_number>987654321</contact_number>
+		<contact_email>jdcruz@example.com</contact_email>
+		<contact_address>30th St., 9th Avenue 1630 Taguig City, Philippines</contact_address>
+		<contact_url>http://www.example.com</contact_url>
+	</deal>
+	<deal>
+		<title>PHP 350 For Premium Threadless Led Zeppelin Shirt from Juan's Shirt Shop</title>
+		<description>PHP 350 For Premium Threadless Led Zeppelin Shirt from Juan's Shirt Shop.  Premium Threadless Shirts with Juan's trademark artwork designs are worth P500++!</description>
+		<discounted_price>350</discounted_price>
+		<original_price>550</original_price>
+		<deal_url>http://www.example.com/example2</deal_url>
+		<deal_thumb>http://www.iana.org/_img/iana-logo-pageheader.png</deal_thumb>
+		<rss_deal_id>http://www.example.com/deal2</rss_deal_id>
+		<expiry>2012-04-28 12:00:00</expiry>
+		<locations>
+			<location>
+				<location_name>30th St., 9th Avenue 1630 Taguig City, Philippines</location_name>
+				<latitude>14.552058</latitude>
+				<longitude>121.051408</longitude>
+			</location>
+			<location>
+				<location_name>Yuchengco Tower RCBC Plaza 6819 Ayala Avenue 1226 Makati City, Philippines</location_name>
+				<latitude>14.561082</latitude>
+				<longitude>121.016421</longitude>
+			</location>
+		</locations>
+		<categories>
+			<category>HNB</category>
+			<category>SHO</category>
+		</categories>
+		<merchant_name>Juan's Shirt Shop</merchant_name>
+		<contact_name>Juan dela Cruz</contact_name>
+		<contact_number>987654321</contact_number>
+		<contact_email>jdcruz@example.com</contact_email>
+		<contact_address>30th St., 9th Avenue 1630 Taguig City, Philippines</contact_address>
+		<contact_url>http://www.example.com</contact_url>
+	</deal>
+</deals>
+
+
+

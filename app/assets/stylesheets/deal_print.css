@@ -1,0 +1,38 @@
+ body {
+    display: inline-block;
+    font-family:  Arial;
+  }
+  
+  table {
+
+  }
+  
+  #container {
+    padding: 10px;
+    border: solid 1px #000000;
+    margin: 10px;
+  }
+  
+  #ad-image {
+    height: 200px;
+  }
+  
+  #ad-price-cell {
+    background: url('/assets/sale.png') no-repeat;
+    background-position:center;
+    height: 90px;
+    width: 345px;
+    vertical-align: middle;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .deal-content {
+    padding: 5px;
+  }
+  
+  p {
+    font-size: 12px;
+  }

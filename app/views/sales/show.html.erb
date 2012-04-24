@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Purchase date:</b>
+  <%= @sale.purchase_date %>
+</p>
+
+<p>
+  <b>Total amount:</b>
+  <%= @sale.total_amount %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @sale.quantity %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @sale.status %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @sale.user_id %>
+</p>
+
+
+<%= link_to 'Back', deals_path %>

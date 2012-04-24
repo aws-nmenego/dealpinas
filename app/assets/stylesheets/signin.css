@@ -1,0 +1,18 @@
+  #container {
+    padding: 40px;
+
+    font-size: 14px;
+    text-align: center;
+  }
+ 
+  #sign-in-container {
+    padding: 20px;
+        background-color: white;
+        display: inline-block;
+        
+  }
+  
+  #sign-in-fields {
+    margin-left: auto;
+    margin-right: auto;
+  }

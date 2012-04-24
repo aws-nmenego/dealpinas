@@ -1,0 +1,24 @@
+
+one:
+  category_name: Health & Beauty
+  icon_image: /assets/map_icons/barber.png
+
+two:
+  category_name: Restaurants
+  icon_image: /assets/map_icons/restaurant.png
+
+three:
+  category_name: Shopping
+  icon_image: /assets/map_icons/cvs.png
+  
+four:
+  category_name: Travel & Hotels
+  icon_image: /assets/map_icons/hotel.png
+ 
+five:
+  category_name: Events & Attractions
+  icon_image: /assets/map_icons/flowers.png
+  
+six:
+  category_name: Others
+  icon_image: /assets/map_icons/star.png

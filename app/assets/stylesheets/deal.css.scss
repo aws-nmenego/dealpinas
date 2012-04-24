@@ -1,0 +1,156 @@
+/*// Place all the styles related to the deal controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+
+form#new_deal{
+    background: #000; 
+    padding: 10px; 
+    opacity: .7; 
+    color: #fff
+}
+
+div.deal_middle{
+/*    float:left; */
+    width: 100%; 
+    height: auto; 
+    padding: 3px
+}
+
+div.deal_lastcol{
+/*    float:right; */
+    width: 100%
+}
+
+
+div#new_deal div{ 
+    padding:5px
+}
+
+div#new_deal h1{ 
+    background:#EFEFEF; 
+    padding:2px; 
+    opacity: .8
+}
+
+div.deal_thumb{ 
+/*    float:left; */
+    width: 120px; 
+    height: 100px; 
+}
+
+div.deal_single {
+    width: 99.5%;
+    margin: 4px 4px 4px 4px;
+    background: white;
+    padding: 3px 3px 3px 3px;
+    clear: both;
+}
+
+span{
+    display:block
+}
+
+span.deal_location{
+    color: #000; 
+    font-size: 12px
+}
+
+span.deal_inventory{
+    color: #000; 
+    font-size: 12px; 
+    font-weight:bold
+}
+
+.price{
+    color: #FF7400; 
+    font-size: 20px;
+}
+
+.price small{
+    color: #FF7400; 
+    font-size: 15px
+}
+
+.search {
+    width: 20%; 
+    height: auto; 
+    min-height: 200px; 
+    margin-top: 20px; 
+    background: #F3F3F3; 
+    opacity: .5;
+    float: right;
+}
+.tabs { 
+    height: auto; 
+}
+
+a.sales_link:link {
+    font-size: large;
+    color: #dc0000;
+    text-decoration: none;
+}
+
+a.sales_link:visited {
+    font-size: large;
+    text-decoration: none;
+    color: #dc0000;
+}
+
+a.sales_link:hover {
+    font-size: large;
+    text-decoration: underline;
+    color: #dc0000;
+}
+
+a.sales_link:active {
+    font-size: large;
+    color: #dc0000;
+    text-decoration: none;
+}
+
+div#deals_wrapper a.basic{ 
+    color: #364667; 
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+div#deals_wrapper a.basic:hover{ 
+    color:#6633CC; 
+    text-decoration: underline; 
+}
+
+div#deals_wrapper a.location {
+    color: #364667; 
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+div#deals_wrapper a.location:hover {
+    color:#6633CC; 
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.small {
+    font-size: 12px; 
+    text-decoration: none;
+}
+
+.small:hover {
+    font-size: 12px; 
+    text-decoration: underline;
+}
+
+.deal_title {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.deal_description {
+    color: blue;
+    font-weight: bold;
+}

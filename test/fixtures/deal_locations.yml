@@ -1,0 +1,123 @@
+loc1:
+  location_name: Unit M17 Auro-vir Plaza, Evangelista Bangkal Makati
+  latitude: 14.54351696092415
+  longitude: 121.01191973686218
+  deal: deal1
+  
+loc2:
+  location_name: Purok 2, Bgy. Tranca, Bay, Laguna 4029 Laguna
+  latitude: 14.13255509791545
+  longitude: 121.26685833930969
+  deal: deal2
+
+loc3:
+  location_name: A.Venue Event Mall, Makati Avenue, Makati City 1200 Makati
+  latitude: 14.566144833842118
+  longitude: 121.02967596054077
+  deal: deal3
+
+loc4:
+  location_name: 4/F Discovery Suites, 25 ADB Avenue, Ortigas Center, Pasig City Pasig
+  latitude: 14.585546463703822
+  longitude: 121.06003186106682;
+  deal: deal4
+
+loc5:
+  location_name: Lot 13 B5, Greenwoods Ave, Greenwoods Executive, Pasig City Pasig
+  latitude: 14.546705149503102
+  longitude: 121.11372700333595
+  deal: deal5
+
+loc6:
+  location_name: New Ali Mall Branch Cubao Quezon 1110 Quezon City
+  latitude: 14.619771608017545
+  longitude: 121.05662813782692
+  deal: deal6
+ 
+loc7:
+  location_name: GLORIETTA 5 2nd Floor, Ayala Center Makati
+  latitude: 14.551637923852215
+  longitude: 121.02734377980232;
+  deal: deal7
+
+loc8:
+  location_name: 220 Wilson Street, Barangay Greenhills, San Juan San Juan
+  latitude: 14.597364681491718
+  longitude: 121.04045307636261
+  deal: deal8
+ 
+loc9:
+  location_name: G/F Ecoplaza Building, 2305 Pasong Tamo Ext., Makati, Metro Manila Makati
+  latitude: 14.533814511112316
+  longitude: 121.02329850196838
+  deal: deal9
+
+loc10:
+  location_name: Block A3-A4, CBP, Diosdado Macapagal Blvd., Pasay City Pasay
+  latitude: 14.538017
+  longitude: 120.982132
+  deal: deal10
+
+loc11:
+  location_name: 7835 Makati Avenue corner Eduque Street, Makati City Makati
+  latitude: 14.565848
+  longitude: 121.030133
+  deal: deal11
+
+loc12:
+  location_name: Southwoods Ecocentrum, Binan, Laguna Makati
+  latitude: 14.326209833717726
+  longitude: 121.05758786201477
+  deal: deal12
+  
+loc13:
+  location_name: 3rd Level, Glorietta 5, Ayala Center, Makati City Makati
+  latitude: 14.551679
+  longitude: 121.028121
+  deal: deal13
+
+loc14:
+  location_name: Upper Lobby, 6766 The Enterprise Center, Paseo de Roxas corner Ayala Ave. Makati City
+  latitude: 14.557531
+  longitude: 121.021078
+  deal: deal14
+
+loc15:
+  location_name: 561 Adriatico St cor. Julio Nakpil, Malate, Manila 
+  latitude: 14.573387
+  longitude: 120.986434
+  deal: deal15
+
+loc16:
+  location_name: Unit 3B, APM Mall, A. Soriano Street, Mabolo, Cebu City, Philippines
+  latitude: 10.316418
+  longitude: 123.919344
+  deal: deal16
+  
+loc17:
+  location_name: No. 11 Nakula Street, Seminyak, Bali, Indonesia
+  latitude: -8.695247
+  longitude: 115.165331
+  deal: deal17
+
+loc18:
+  location_name: 54 Clemente St., Donsol Makati
+  latitude: 14.544622
+  longitude: 120.997539
+  deal: deal18
+
+loc19: 
+  location_name: 2nd floor Banilad Town Centre Makati
+  latitude: 10.34085563262808
+  longitude: 123.91256640434267
+  deal: deal19
+
+loc20:
+  location_name: Unit 3 Nasipit Commercial, Nasipit, Talamban Makati
+  latitude: 10.361626340291371
+  longitude: 123.91605327606203
+  deal: deal20
+  
+loc100:
+  location_name: Unit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban MakatiUnit 3 Nasipit Commercial, Nasipit, Talamban Makati
+  deal: loc100

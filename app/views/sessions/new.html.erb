@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag 'signin.css' %>
+
+<div id="container">
+
+  <div id="sign-in-container">
+    <h3 id="sign-in-label">Sign in to Deal Pinas</h3>
+    <span style="
+          color: red
+          ">
+            <%= flash[:error] %>
+            <%= flash[:notice] %>
+            <%= flash[:to_path] %>
+    </span>
+    <%= form_for(:session, :url => sessions_path) do |f| %>
+    <table id="sign-in-fields">
+      <tr class="field">
+        <td><%= f.label :email %></td>
+        <td><%= f.text_field :email %></td>
+      </tr>
+      <tr class="field">
+        <td><%= f.label :password %></td>
+        <td><%= f.password_field :password %></td>
+      </tr>
+      <tr class="field">
+        <td></td>
+        <td><%= f.submit "Sign in" %></td>
+      </tr>
+      <tr class="field">
+        <td></td>
+        <td>New user? <%= link_to "Sign up now!", '#' %></td>
+      </tr>
+
+    </table>
+    <% end %>
+
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+require 'rubygems'
+require 'mechanize'
+agent = Mechanize.new
+agent.set_proxy('192.168.179.202', '3128')
+agent.open_timeout = 3
+agent.read_timeout = 4
+agent.keep_alive = false
+
+url = 'http://cashcashpinoy.com'
+page = agent.get(url);
+
+#print "testing" 
+print page.links.first.text
+#print page.search("off")
+
+#upstring = page.parser.xpath("/html/body/form/table[2]/tr/td/table/tr[5]/td/table/tr[6]/td[3]/a/img")[0]['title'].to_s
+#print upstring
+mystring = page.parser.xpath('/html/body/div/div/div/div/ul/li').to_html
+print mystring

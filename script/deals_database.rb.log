@@ -1,0 +1,468 @@
+# Logfile created on 2012-04-24 13:37:14 +0800 by logger.rb/25413
+I, [2012-04-24T13:37:14.086123 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.close
+I, [2012-04-24T13:37:14.086123 #4292]  INFO -- : Database closed.
+I, [2012-04-24T13:37:14.086123 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.close
+I, [2012-04-24T13:37:14.117374 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.read_config
+I, [2012-04-24T13:37:14.117374 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.read_config
+I, [2012-04-24T13:37:19.336224 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:19.336224 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM4NA=='
+I, [2012-04-24T13:37:19.336224 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Manila Ocean Park','P499 instead of P1050 for Manila Ocean Park`s Oceanarium, Jellies Exhibit, Musical Fountain Show & Penguin Talk Show','http://www.metrodeal.com/main.php?dealId=MTM4NA==','http://www.metrodeal.com/uploads/deal/thumb/1384.jpg',
+						'1050','4538 ','','52%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 1
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,1)
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 1
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Pasay Boulevard Manila','1','14.57944','120.97248',NOW(), NOW());
+I, [2012-04-24T13:37:19.351849 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:19.398725 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM5Mg=='
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Dermcare (30 Branches)','P250 instead of P3000 for Radio Frequency Slimming to Reduce Fat and Cellulite, and Tighten Skin at Dermcare (30 Branches)','http://www.metrodeal.com/main.php?dealId=MTM5Mg==','http://www.metrodeal.com/uploads/deal/thumb/1392.jpg',
+						'3000','6474 ','','92%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 2
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,2)
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 2
+I, [2012-04-24T13:37:21.805021 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.820646 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Epifanio de los Santos Avenue, Quezon City, Philippines','2','14.65653','121.03042',NOW(), NOW());
+I, [2012-04-24T13:37:21.820646 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:21.867522 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:28.523900 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:28.523900 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM4Mg=='
+I, [2012-04-24T13:37:28.523900 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.523900 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Fatboy`s Pizza (20 Branches)','50% Off: P295 instead of P590 for 2 Delicious and Mouthwatering Supersize 14 Inch Pizzas at Fatboy\s Pizza (20 Branches)s Pizza (20 Branches)','http://www.metrodeal.com/main.php?dealId=MTM4Mg==','http://www.metrodeal.com/uploads/deal/thumb/791.jpg',
+						'590','4307 ','','50%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 3
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,3)
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 3
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Pacific Dr, SM Mall of Asia, Pasay, Philippines','3','14.5352','120.9822',NOW(), NOW());
+I, [2012-04-24T13:37:28.539525 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:28.586401 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM0MA=='
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Splash Island','55% Off: P399 instead of P880 for an All-Day Pass to Splash Island & a Mouthwatering Meal at Tiki Grill or 1 Exciting Extreme Activity','http://www.metrodeal.com/main.php?dealId=MTM0MA==','http://www.metrodeal.com/uploads/deal/thumb/1340.jpg',
+						'880','2218 ','','55%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 4
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,4)
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 4
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Southwoods Ecocentrum Binan, Laguna, Philippines','4','14.32550','121.05759',NOW(), NOW());
+I, [2012-04-24T13:37:30.820819 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:30.867695 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM1Ng=='
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Asian Metro Tours & Events Co.','3-Days/2-Nights Stay in Palawan, Roundtrip Airfare, Transfers, Underground River Tour for P6499 instead of P13000','http://www.metrodeal.com/main.php?dealId=MTM1Ng==','http://www.metrodeal.com/uploads/deal/thumb/1356.jpg',
+						'13000','154 ','','50%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 5
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,5)
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 5
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Unit 512 Istana Building Mayfield Park Pasig City','5','14.592923','121.107656',NOW(), NOW());
+I, [2012-04-24T13:37:34.867772 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:34.914648 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:36.899061 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:36.899061 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTMyNg=='
+I, [2012-04-24T13:37:36.899061 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.899061 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','StoneLeaf Spa and Wellness Center','P149 instead of P700 for a 60-Minute Heavenly Full Body Massage at StoneLeaf Spa in Makati - Save 79%','http://www.metrodeal.com/main.php?dealId=MTMyNg==','http://www.metrodeal.com/uploads/deal/thumb/1326.jpg',
+						'700','2939 ','','79%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:36.899061 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 6
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,6)
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 6
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('G/F Makati Creekside Bldg Amorsolo corner Rufino Street Legaspi Village Makati City','6','14.55529','121.01487',NOW(), NOW());
+I, [2012-04-24T13:37:36.914686 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:36.961562 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTI1OQ=='
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Midas Hotel','Eat-All-You-Can Unlimited Buffet & Drinks with the Finest Foods from Asia and Europe at Midas Hotel for P999 instead of P1930','http://www.metrodeal.com/main.php?dealId=MTI1OQ==','http://www.metrodeal.com/uploads/deal/thumb/1259.jpg',
+						'1930','849 ','','48%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 7
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,7)
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 7
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('2702 Roxas Boulevard Pasay ','7','14.539588','120.992783',NOW(), NOW());
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:39.836617 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM2MQ=='
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Spa 101 (4 Branches)','P200 instead of P900 for a 90 Min. Spa Combo including Foot Spa, Scrub, Pedicure & Relaxing Massage at Spa 101','http://www.metrodeal.com/main.php?dealId=MTM2MQ==','http://www.metrodeal.com/uploads/deal/thumb/474.jpg',
+						'900','2354 ','','78%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 8
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,8)
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 8
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Spa 101 Katipunan 327 Katipunan Avenue Quezon City Tel: 399-0971Spa 101 Maginhawa 88B Maginhawa St. Teachers Village Quezon City Tel: 407-4525Spa 101 Timog Avenue 83 Timog Avenue Tomas Morato Rotonda Quezon City Tel: 416-8189Spa 101 Banawe Banawe corner Linaw near Del Monte Ave Quezon City Tel: 399-2703  ','8','14.64016','121.07443',NOW(), NOW());
+I, [2012-04-24T13:37:42.164787 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:42.227288 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM1NA=='
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','The Zen Institute','Get your Body in Shape with Ultrasound Cavitation Slimming at The Zen Institute for P450 instead of P10000 (3 Branches)','http://www.metrodeal.com/main.php?dealId=MTM1NA==','http://www.metrodeal.com/uploads/deal/thumb/239.jpg',
+						'10000','1097 ','','96%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 9
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,9)
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 9
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Atang Dela Rama, Pasay, Philippines','9','14.5532','120.9798',NOW(), NOW());
+I, [2012-04-24T13:37:46.649248 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:46.696124 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTMyMQ=='
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Reliable International Travel Services','3-Days/2-Nights in Hong Kong and Shenzhen, City Tour and Disneyland Ride-All-You-Can for P4500 instead of P12780','http://www.metrodeal.com/main.php?dealId=MTMyMQ==','http://www.metrodeal.com/uploads/deal/thumb/1321.jpg',
+						'12780','958 ','','65%', 'MetroDeal', '2012-4-26 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 10
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,10)
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 10
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Room 201 and 204 #317 Jackson Shoe Building Libertad Street Pasay City','10','14.5456','120.9918',NOW(), NOW());
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:50.696201 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQwNg=='
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Pink Smooches Flower Shop','Surprise Her on Mothers Day with a Basket of 3 Dozens of Fresh Red, White or Pink Roses with Balloons for P999 instead of P3500','http://www.metrodeal.com/main.php?dealId=MTQwNg==','http://www.metrodeal.com/uploads/deal/thumb/1406.jpg',
+						'3500','60 ','','71%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 11
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,11)
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 11
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('B8 L17 Sugartowne Subd Batasan Hills Quezon City','11','14.69046','121.10098',NOW(), NOW());
+I, [2012-04-24T13:37:55.680672 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:55.743173 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQyMA=='
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Manila Ocean Park','P150 instead of P300 for an Entrance to the Musical Fountain Show - Experience a Musical Wonder at Manila Ocean Park','http://www.metrodeal.com/main.php?dealId=MTQyMA==','http://www.metrodeal.com/uploads/deal/thumb/1420.jpg',
+						'300','107 ','','50%', 'MetroDeal', '2012-4-25 10:0:12', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 12
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,12)
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 12
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Pasay Boulevard Manila','12','14.57944','120.97248',NOW(), NOW());
+I, [2012-04-24T13:37:57.508832 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:57.571333 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM3OA=='
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Beauty Secrets at the Spa','Get your Body in Shape with Lipo-Sculpt Cavitation Sessions at Beauty Secrets for P250 instead of P5000 (2 Branches)','http://www.metrodeal.com/main.php?dealId=MTM3OA==','http://www.metrodeal.com/uploads/deal/thumb/471.jpg',
+						'5000','80 ','','95%', 'MetroDeal', '2012-4-25 10:0:7', NOW(),NOW() , 'new');
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 13
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,13)
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 13
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Meralco Ave. Branch:','13','14.58582','121.06401',NOW(), NOW());
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:37:59.133863 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQyMw=='
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Nu Arts and Decor','Reduce Your Automobile Scratch Repair Bill with Fix It Pro Scratch Repair Pen for P195 instead of P1200','http://www.metrodeal.com/main.php?dealId=MTQyMw==','http://www.metrodeal.com/uploads/deal/thumb/1423.jpg',
+						'1200','105 ','','84%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 14
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,14)
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 14
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Free delivery. See "Highlights" for shipment date.','14','14.60549','121.05348',NOW(), NOW());
+I, [2012-04-24T13:38:00.758894 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:00.805770 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:02.587054 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:02.587054 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQyNA=='
+I, [2012-04-24T13:38:02.587054 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.587054 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','S.W.A.T. by Masterminds','P799 instead P1980 for an Indoor or Outdoor Target Shooting Session with 30 Rounds of Ammo at S.W.A.T. by Masterminds','http://www.metrodeal.com/main.php?dealId=MTQyNA==','http://www.metrodeal.com/uploads/deal/thumb/1424.jpg',
+						'1980','10 ','','60%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 15
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,15)
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 15
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('10 Cherry Blossom Street Mapayapa Village 2 Commonwealth Q.C.','15','14.68765','121.07231',NOW(), NOW());
+I, [2012-04-24T13:38:02.602679 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:02.649555 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQwNA=='
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Lu Barber Cuts','P199 instead of P700 for a Foot Spa Combo Including Soak and Scrub with Manicure and Pedicure at Lu Barber Cuts - Save 72%','http://www.metrodeal.com/main.php?dealId=MTQwNA==','http://www.metrodeal.com/uploads/deal/thumb/1404.jpg',
+						'700','30 ','','72%', 'MetroDeal', '2012-4-26 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 16
+I, [2012-04-24T13:38:04.368338 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.368338 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,16)
+I, [2012-04-24T13:38:04.368338 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.368338 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 16
+I, [2012-04-24T13:38:04.368338 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.368338 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('174 Del Monte Ave.Cordillera Quezon City','16','14.63899','121.00346',NOW(), NOW());
+I, [2012-04-24T13:38:04.368338 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:04.399589 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQwMw=='
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Makati Palace Hotel','Elegant Superior Suites Getaway for 2 Persons at the prestigious Makati Palace Hotel for P2499 instead of P6000 - Save 58%','http://www.metrodeal.com/main.php?dealId=MTQwMw==','http://www.metrodeal.com/uploads/deal/thumb/1403.jpg',
+						'6000','15 ','','58%', 'MetroDeal', '2012-4-26 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 17
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,17)
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 17
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('5011 P. Burgos corner Caceres St Makati City','17','14.56292','121.02988',NOW(), NOW());
+I, [2012-04-24T13:38:06.180873 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:06.212124 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM5OQ=='
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Fun Ranch','Kids Rule at Fun Ranch! Unlimited Play at Fun Ranch Playdium & 1 Ride Ticket for P195 per Child instead of P390','http://www.metrodeal.com/main.php?dealId=MTM5OQ==','http://www.metrodeal.com/uploads/deal/thumb/1399.jpg',
+						'390','905 ','','50%', 'MetroDeal', '2012-4-26 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 18
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,18)
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 18
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES (' ','18','14.58713','121.07792',NOW(), NOW());
+I, [2012-04-24T13:38:07.727778 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:07.774654 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQwNQ=='
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Pick up at MetroDeal Office','Show off Your Unique Taste with a Sleek Japan Movement Tomato Reptile Textured Watch for P400 instead of P800','http://www.metrodeal.com/main.php?dealId=MTQwNQ==','http://www.metrodeal.com/uploads/deal/thumb/1405.jpg',
+						'800','95 ','','50%', 'MetroDeal', '2012-4-26 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 19
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,19)
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 19
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('27F Enterprise Center, 6766 Ayala Ave. cor. Paseo de Roxas, Makati','19','14.55600','121.02105',NOW(), NOW());
+I, [2012-04-24T13:38:09.337184 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:09.384060 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTQwMQ=='
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Pab Star Travel & Tours','Enchanting Getaway: 3-Days/2-Nights Accommodation and Singapore City Tour for P5313 instead of P13000','http://www.metrodeal.com/main.php?dealId=MTQwMQ==','http://www.metrodeal.com/uploads/deal/thumb/1136.jpg',
+						'13000','53 ','','59%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 20
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,20)
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 20
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('Rm06 2nd Floor A. P. Bonifacio Bldg. Paseo Del Congreso, Catmon Malolos City Malolos, Bulacan','20','14.857','120.813',NOW(), NOW());
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:11.087217 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : START C:/Sites/Dealpinas/script/deals_database.rb.insert_deal
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE: SELECT * FROM `deals` WHERE `deal_url` = 'http://www.metrodeal.com/main.php?dealId=MTM5OA=='
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE: INSERT INTO `deals`( `rss_deal_id`, `title`, `description`, `deal_url`, `deal_thumb`, 
+						`price`, `no_of_items_sold`, `quantity`, `discount`, `author`, `expiry`, `created_at`, `updated_at` , `status`) 
+						VALUES ('','Pick up at MetroDeal Office','Canon EOS 1100D SLR with 18-55mm Kit Lens, Bag, 4GB SD & Extras for P25999 instead of P36500','http://www.metrodeal.com/main.php?dealId=MTM5OA==','http://www.metrodeal.com/uploads/deal/thumb/622.jpg',
+						'36500','14 ','','29%', 'MetroDeal', '2012-4-25 10:0:0', NOW(),NOW() , 'new');
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE: SELECT * FROM `categories` WHERE `category_name` = 'Others'
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE: SELECT * FROM `tags` WHERE 1
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE DELETE FROM `deal_category_mappings` WHERE `deal_id` = 21
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_category_mappings` (`category_id`,`deal_id`) VALUES (0,21)
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE: DELETE FROM `deal_locations` WHERE `deal_id` = 21
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : EXECUTE: INSERT INTO `deal_locations`(`location_name`, `deal_id`, `latitude`, `longitude`, `created_at`, `updated_at`)
+					VALUES ('27F Enterprise Center, 6766 Ayala Ave. cor. Paseo de Roxas, Makati','21','14.55600','121.02105',NOW(), NOW());
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : QUERY OK
+I, [2012-04-24T13:38:12.884127 #4292]  INFO -- : END C:/Sites/Dealpinas/script/deals_database.rb.insert_deal

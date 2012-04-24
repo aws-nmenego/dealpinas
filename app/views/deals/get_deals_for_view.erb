@@ -1,0 +1,119 @@
+<%if @results.size==0 %>empty
+<%elsif @results.size > 0  %>
+  <script>
+    var tempWidth , tempHeight;
+    var i = 0;
+  </script>
+  <% for i in 0...@results.length  %>
+    <% deal = @results[i]; %>
+
+    <% parentid = ""+(Time.now().to_i.to_s)+"parentid"+i.to_s %>
+    <div class="deal_single" id="<%=parentid%>">
+      <% uid = ""+(Time.now().to_i.to_s)+"imageid"+i.to_s %>
+      <table>
+        <tr>
+          <td valign="center" width="120">
+            <div id="<%=uid%>"class="deal_thumb" style="
+                       display:inline;
+                       position:relative;
+                       width: 120px;
+                       height: 80px;
+                       overflow: hidden;
+                     ">
+                  <a class="pic" target="_blank" href="<%= deal[:deal_url]%>"  
+                     style="">
+                    <img src="<%= deal[:image_url] %>"/>
+                    <script>
+                          $('#<%=uid%> a img').attr('width' , 120);
+                          $('#<%=uid%> a img').error( function(){
+                            $('#<%=uid%> a img').attr('height' , 80);
+                          })
+                          
+                    </script>
+                  </a>
+                </div>
+            </td>
+            <td valign="center" style="width: 450px;">
+                <% uid = ""+Time.now().to_i.to_s+"dealmiddle"+i.to_s %>
+                
+                <div class="deal_middle" id="<%=uid%>">
+                  <span><font size="3" face="Arial">
+                    <b>
+                      <%= deal[:title].length > 150 ?
+                          deal[:title][0..150] + '...' :
+                          deal[:title]
+                      %>
+                    </b>
+                    </font></span>
+                  <span><font size="2" face="Arial" color="#528fcd">
+                    <%= deal[:description].length > 400 ? 
+                      deal[:description][0..400]+'...' : 
+                      deal[:description]%>
+                    </font></span>
+                  
+                  <font size="2" face="Arial" color="gray">
+                  Expires <%= deal[:expiry].strftime('%m/%d/%y')%>
+                  </font>
+                  
+                  <div id="editLocationLink<%=i%>"></div>
+                  <script>
+                    if (allowedToEdit('<%=deal[:author]%>')) {
+                      $('#editLocationLink<%=i%>').html (
+                      '<a href="deal_locations?deal_id=<%=deal[:deal_id]%>" style="font-size:0.75em">Edit Deal Locations</a><br/>'
+                    );
+                    }
+                  </script>
+                </div>
+            </td>  
+            <td valign="center" style="width:240px;">
+                <div class="deal_lastcol" style="text-align: right;">
+                    <div>
+                      <font size="4" face="Arial" color="red"><b>
+                        <% if  deal[:price] && !deal[:price].chomp.empty?  %>
+                          <%=  deal[:price]%>
+                        <%end%>
+                      </b></font>
+                    </div>
+                  
+                  <font face="Arial" size="2" color="black">
+                  <% if  deal[:is_ad]%>
+                    Ad
+                  <% else %>
+                    Deal
+                  <% end %>
+                  by <%= deal[:author]%></font>
+                  
+                  <style>
+                    .deal_detail font a:active{
+                      color: #528FCD;
+                      font-weight: bolder;
+                      text-decoration: none;
+                    }
+                    .deal_detail font a:link{
+                      color: #528FCD;
+                      font-weight: bolder;
+                      text-decoration: none;
+                    }
+                    .deal_detail font a:visited{
+                      color: #528FCD;
+                      font-weight: bolder;
+                      text-decoration: none;
+                    }
+                  </style>
+                  <div class="deal_detail" style="margin-top: 7px" >
+                    <font size="2.5" face="Arial"">
+                    <a target="_blank" href="<%= deal[:deal_url] %>"
+                       >
+                      View Deal<font style="font-size: 18px;"> »</font>
+                    </a>
+                    </font>
+                  </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+  <% end %>
+    
+<%end%>
+    

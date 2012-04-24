@@ -1,0 +1,25 @@
+<h1>Listing sale_details</h1>
+
+<table>
+  <tr>
+    <th>Sale</th>
+    <th>Deal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sale_details.each do |sale_detail| %>
+  <tr>
+    <td><%= sale_detail.sale_id %></td>
+    <td><%= sale_detail.deal_id %></td>
+    <td><%= link_to 'Show', sale_detail %></td>
+    <td><%= link_to 'Edit', edit_sale_detail_path(sale_detail) %></td>
+    <td><%= link_to 'Destroy', sale_detail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sale detail', new_sale_detail_path %>

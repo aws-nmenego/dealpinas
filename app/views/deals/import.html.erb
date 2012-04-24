@@ -1,0 +1,172 @@
+<%= content_for :head do%>
+  <%= javascript_include_tag 'jquery.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.8.18.min.js' %>
+  <%= stylesheet_link_tag 'jquery.ui.all.css' %>
+  <%= stylesheet_link_tag 'new_deal.css' %>
+<%end%>
+
+<div id="page-contents">
+    <p></p>
+  <span id="div-container">
+    <%= form_tag({:action => :upload}, :multipart => true) do %>
+    <div id="div-top" class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><h3>Add New Deal via XML</h3></div>
+        
+    <div id="div-form-contents">
+        <p>DealPinas now supports XML uploads!<br/>
+        Upload your file:</p>
+        <%= file_field_tag 'file' %><%=submit_tag 'Upload'%>
+        <% if !@result.blank? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@result.length, "error") %> prohibited the deal/s from being saved.</h2>
+          <ul>
+            <% @result.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>         
+        <p id="notice"><%= notice %></p>
+        <div id="instructions">
+          <p>Click <a href="/uploads/sample.xml">here</a> for a sample of the required XML file format. Below you can find explanations of the different elements of this document.</p>
+          <strong>XML Requirements</strong>
+          <table id="tbl-instructions">
+            <tbody>
+            <tr>
+              <th class="col1">Field Name</th>
+              <th class="col2">Field Description</th>
+              <th class="col3">Requirement</th>
+            </tr>
+            <tr class="alt">
+              <td class="col1">deals</td>
+              <td class="col2">This element contains all deals of your website. The minimum number of deals is one.</td>
+              <td class="col3">Required</td>
+            </tr>
+            <tr>
+              <td class="col1">deal</td>
+              <td class="col2">A unique deal.</td>
+              <td class="col3">Required</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">title</td>
+              <td class="col2">The description of your deal, as it will appear on our website. Character limit of 255 characters.</td>
+              <td class="col3">Required</td>
+            </tr>
+            <tr>
+              <td class="col1">description</td>
+              <td class="col2">Detailed deal description. No character limit.</td>
+              <td class="col3">Required</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">price</td>
+              <td class="col2">Must be in PHP. No peso signs. Value inclusive of decimal points for cents.</td>
+              <td class="col3">Required</td>
+            </tr>
+            <tr>
+              <td class="col1">discount</td>
+              <td class="col2">Must be with % signs. Must be rounded to whole number. e.g. 25%</td>
+              <td class="col3">Required</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">expiry</td>
+              <td class="col2">The time when the deal ends in the following format: YYYY-MM-DD HH:MM:SS</td>
+              <td class="col3">Required</td>
+            </tr>
+            <tr>
+              <td class="col1">deal_url</td>
+              <td class="col2">URL where users can purchase the deal. Please provide full URL including http://. If none is provided, default DealPinas page will be assigned</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">deal_thumb</td>
+              <td class="col2">URL that links to your deal image. Please provide full URL including http://</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr>
+              <td class="col1">rss_deal_id</td>
+              <td class="col2">URL that links to your RSS. Please provide full URL including http://</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">locations</td>
+              <td class="col2">The list of locations for one deal.</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr>
+              <td class="col1">location</td>
+              <td class="col2">The specific address of the deal containing location name and the coordinates.</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">location_name</td>
+              <td class="col2">The specific address of the deal.  We recommend that you ensure that you register your shop's address at <a href="http://www.google.com/places/">Google Places</a> for mapping purposes.</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr>
+              <td class="col1">latitude</td>
+              <td class="col2">The global latitude.</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">longitude</td>
+              <td class="col2">The global longitude.</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr>
+              <td class="col1">categories</td>
+              <td class="col2">The list of categories for one deal.</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">category</td>
+              <td class="col2">Category code for the deal. Following categories are available:<p></p>
+                <ul>              
+                  <% @category.each do |cat| %>
+                    <li><%= cat.code %> - <%= cat.category_name %></li>
+                  <% end %>
+                </ul>
+              </td>
+              <td>Optional</td>
+            <tr>
+              <td class="col1">merchant_name</td>
+              <td class="col2">The company/shop's name</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">contact_name</td>
+              <td class="col2">The contact person's full name. Could be owner, retailer, or person-in-charge of the deal.</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr>
+              <td class="col1">contact_number</td>
+              <td class="col2">Contact details of the person in contact_name</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr class="alt">
+              <td class="col1">contact_email</td>
+              <td class="col2">Contact details of the person in contact_name</td>
+              <td class="col3">Optional</td>
+            </tr>
+            <tr>
+              <td class="col1">contact_address</td>
+              <td class="col2">Contact details of the person in contact_name</td>
+              <td class="col3">Optional</td>
+            </tr> 
+            <tr class="alt">
+              <td class="col1">contact_url</td>
+              <td class="col2">Contact details of the person in contact_name</td>
+              <td class="col3">Optional</td>
+            </tr>
+            </tbody>
+
+ 
+          </table>
+          <p>It is highly recommended that you use relevant keywords for your description so your deal may be more searchable.</p>
+        </div>
+      
+    </div><!--div-form-contents-->
+    <div id="div-bottom" class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+      <%=  submit_tag "Cancel", :type=>"button", :onclick => "window.location = '/'" %>
+    </div>
+    <% end %>
+  </span><!--subhead-->
+</div>

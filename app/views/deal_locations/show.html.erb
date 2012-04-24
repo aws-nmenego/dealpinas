@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div style="background: #FFFFFF;opacity: 0.7;">
+  <p>
+    <b>Deal location:</b>
+    <%= @deal_location.deal_location %>
+  </p>
+
+  <br/>
+  <%= link_to 'Edit', edit_deal_location_path(@deal_location) %> |
+  <%= link_to 'Back', deal_locations_path %>
+  <br/>
+
+</div>

@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag 'pages.css' %>
+
+<div id="container">  
+  <%= form_for @message, :url => contact_path do |form| %>
+  <h3>Contact Us</h3>
+  <p id="flash"><% flash if !flash.blank? %></p>
+  <table id="table-form">
+    <tr>
+      <td><%= form.label :name %>  <font class="required" title="This is a required field">*</font></td>
+      <td><%= form.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= form.label :email %>  <font class="required" title="This is a required field">*</font></td>
+      <td><%= form.text_field :email %></td>
+    </tr>
+    <tr>
+      <td><%= form.label :subject %>  <font class="required" title="This is a required field">*</font></td>
+      <td><%= form.text_field :subject %></td>
+    </tr>
+    <tr>
+      <td class="td-align-top"><%= form.label :body %> <font class="required" title="This is a required field">*</font></td>
+      <td><%= form.text_area :body %></td>
+    </tr>
+    <tr id="row-actions">
+      <td colspan="2"><%= form.submit "Send" %><%=  submit_tag "Cancel", :type=>"button", :onclick => "window.location = '/'" %></td>
+    </tr>
+  </table>
+
+  <% end %>
+</div>

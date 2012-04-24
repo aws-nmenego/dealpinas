@@ -1,0 +1,15 @@
+<% title "New Search" %>
+
+<%= form_for @search do |f| %>
+  <p>
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </p>
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.number_field :category_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+
+

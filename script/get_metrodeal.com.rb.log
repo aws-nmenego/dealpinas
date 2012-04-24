@@ -1,0 +1,146 @@
+# Logfile created on 2012-04-24 13:37:14 +0800 by logger.rb/25413
+I, [2012-04-24T13:37:14.086123 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb
+I, [2012-04-24T13:37:14.086123 #4292]  INFO -- : Database closed
+I, [2012-04-24T13:37:14.086123 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb
+I, [2012-04-24T13:37:14.132999 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.start_retrieval
+I, [2012-04-24T13:37:14.132999 #4292]  INFO -- : Retrieving sublinks of root page
+I, [2012-04-24T13:37:14.132999 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.get_child_links
+I, [2012-04-24T13:37:16.336166 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.get_child_links
+I, [2012-04-24T13:37:16.336166 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:19.320598 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM4NA==
+I, [2012-04-24T13:37:19.320598 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM4NA==
+I, [2012-04-24T13:37:19.398725 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM4NA==
+I, [2012-04-24T13:37:19.398725 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:19.398725 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:21.164384 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM5Mg==
+I, [2012-04-24T13:37:21.164384 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM5Mg==
+I, [2012-04-24T13:37:21.867522 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM5Mg==
+I, [2012-04-24T13:37:21.867522 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:21.867522 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:27.352003 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM4Mg==
+I, [2012-04-24T13:37:27.352003 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM4Mg==
+I, [2012-04-24T13:37:28.586401 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM4Mg==
+I, [2012-04-24T13:37:28.586401 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:28.586401 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM0MA==
+I, [2012-04-24T13:37:30.805194 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM0MA==
+I, [2012-04-24T13:37:30.867695 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM0MA==
+I, [2012-04-24T13:37:30.867695 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:30.867695 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:34.852147 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM1Ng==
+I, [2012-04-24T13:37:34.852147 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM1Ng==
+I, [2012-04-24T13:37:34.914648 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM1Ng==
+I, [2012-04-24T13:37:34.914648 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:34.914648 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:36.899061 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTMyNg==
+I, [2012-04-24T13:37:36.899061 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTMyNg==
+I, [2012-04-24T13:37:36.961562 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTMyNg==
+I, [2012-04-24T13:37:36.961562 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:36.961562 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTI1OQ==
+I, [2012-04-24T13:37:39.789741 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTI1OQ==
+I, [2012-04-24T13:37:39.836617 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTI1OQ==
+I, [2012-04-24T13:37:39.836617 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:39.836617 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:42.149162 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM2MQ==
+I, [2012-04-24T13:37:42.149162 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM2MQ==
+I, [2012-04-24T13:37:42.227288 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM2MQ==
+I, [2012-04-24T13:37:42.227288 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:42.227288 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:46.024236 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM1NA==
+I, [2012-04-24T13:37:46.024236 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM1NA==
+I, [2012-04-24T13:37:46.696124 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM1NA==
+I, [2012-04-24T13:37:46.696124 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:46.696124 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTMyMQ==
+I, [2012-04-24T13:37:50.633700 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTMyMQ==
+I, [2012-04-24T13:37:50.696201 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTMyMQ==
+I, [2012-04-24T13:37:50.696201 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:50.696201 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:55.665046 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQwNg==
+I, [2012-04-24T13:37:55.665046 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQwNg==
+I, [2012-04-24T13:37:55.743173 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQwNg==
+I, [2012-04-24T13:37:55.743173 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:55.743173 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:57.493206 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQyMA==
+I, [2012-04-24T13:37:57.493206 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQyMA==
+I, [2012-04-24T13:37:57.571333 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQyMA==
+I, [2012-04-24T13:37:57.571333 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:57.571333 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM3OA==
+I, [2012-04-24T13:37:59.071362 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM3OA==
+I, [2012-04-24T13:37:59.133863 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM3OA==
+I, [2012-04-24T13:37:59.133863 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:37:59.133863 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:00.743269 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQyMw==
+I, [2012-04-24T13:38:00.743269 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQyMw==
+I, [2012-04-24T13:38:00.805770 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQyMw==
+I, [2012-04-24T13:38:00.805770 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:00.805770 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:02.587054 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQyNA==
+I, [2012-04-24T13:38:02.587054 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQyNA==
+I, [2012-04-24T13:38:02.649555 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQyNA==
+I, [2012-04-24T13:38:02.649555 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:02.649555 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQwNA==
+I, [2012-04-24T13:38:04.352713 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQwNA==
+I, [2012-04-24T13:38:04.399589 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQwNA==
+I, [2012-04-24T13:38:04.399589 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:04.399589 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:06.165248 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQwMw==
+I, [2012-04-24T13:38:06.165248 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQwMw==
+I, [2012-04-24T13:38:06.212124 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQwMw==
+I, [2012-04-24T13:38:06.212124 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:06.212124 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:07.712153 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM5OQ==
+I, [2012-04-24T13:38:07.712153 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM5OQ==
+I, [2012-04-24T13:38:07.774654 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM5OQ==
+I, [2012-04-24T13:38:07.774654 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:07.774654 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:09.321558 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQwNQ==
+I, [2012-04-24T13:38:09.321558 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQwNQ==
+I, [2012-04-24T13:38:09.384060 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQwNQ==
+I, [2012-04-24T13:38:09.384060 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:09.384060 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:11.024716 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTQwMQ==
+I, [2012-04-24T13:38:11.040341 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTQwMQ==
+I, [2012-04-24T13:38:11.087217 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTQwMQ==
+I, [2012-04-24T13:38:11.087217 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:11.087217 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : Open url : http://www.metrodeal.com/main.php?dealId=MTM5OA==
+I, [2012-04-24T13:38:12.837251 #4292]  INFO -- : Fetching from : http://www.metrodeal.com/main.php?dealId=MTM5OA==
+I, [2012-04-24T13:38:12.884127 #4292]  INFO -- : Successfully inserted data : http://www.metrodeal.com/main.php?dealId=MTM5OA==
+I, [2012-04-24T13:38:12.884127 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:12.884127 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:14.946666 #4292] ERROR -- : 
+I, [2012-04-24T13:38:14.946666 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:14.946666 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.321674 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.321674 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.321674 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.352924 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.352924 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.352924 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.399800 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.399800 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.399800 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.431051 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.431051 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.431051 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.462301 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.462301 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.462301 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.493552 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.493552 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.493552 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.540428 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.540428 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.540428 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.571678 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.571678 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.602929 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.602929 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.602929 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+E, [2012-04-24T13:38:15.649805 #4292] ERROR -- : 
+I, [2012-04-24T13:38:15.649805 #4292]  INFO -- : END C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape
+I, [2012-04-24T13:38:15.649805 #4292]  INFO -- : START C:/Sites/Dealpinas/script/get_metrodeal.com.rb.scrape

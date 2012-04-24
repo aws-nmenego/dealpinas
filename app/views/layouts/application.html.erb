@@ -1,0 +1,175 @@
+<%if @disable_layout %>
+  <%= yield %>
+<%else%>
+
+  <!DOCTYPE html>
+
+  <html>
+    <head>
+      <title>Dealmap</title>
+      <%= yield :head %>
+      <%= stylesheet_link_tag "jquery-ui-1.8.18.custom.css", "application" %>
+      <%= javascript_include_tag "jquery-ui-1.8.18.custom.min.js", "application" %>
+      <%= csrf_meta_tags %>
+      <link rel="icon" href="/assets/favicon.ico" type="image/ico" />
+    </head>
+    <body>
+
+      <style type="text/css">
+        .clear {
+          clear: both;
+          vertical-align: middle;
+          margin-top: 5px;
+          height: 20px;
+          width: 100%;
+          display: inline-block;
+        }
+        /* error messages*/
+        .flash {
+          color: red;
+        }
+
+        .signin-out {
+          text-align: right;
+        }
+
+        simple_blue {
+          color: #04819E;
+        }
+
+        error{
+          color: red;
+        }
+        #header a:hover {
+          text-decoration: underline;
+          background: none;
+        }
+        #header a {
+          color: white;
+          text-decoration: none;
+          font-size: smaller
+        }
+        
+        #header-redirect {
+          position: absolute;
+          height: 72px;
+          width: 400px;
+          cursor: pointer;
+        }
+        
+        #share-buttons {
+          float: right;
+          margin-top: -45px;
+          position:relative;
+        }
+        
+        #post-deal {
+          margin-right: 250px;
+        }
+        
+        #post-ad {
+          margin-right: 150px;
+        }
+        
+        .site-post {
+          color:white;
+          margin-top: -45px;
+          position:relative;
+          float:right;
+          font-weight: bold;
+          border: solid 1px;
+          padding: 5px;
+          cursor: pointer;
+        }
+        
+        .site-post:hover {
+          color: #CECECE;
+        }
+      </style>
+
+      <div id="page">
+        <div id="header">
+          <div id="header-redirect" onclick="window.location='/'"></div>
+          <img src="/assets/images/header_beta.jpg" width="1024" height="72"/>
+          <div id="post-deal" class="site-post" onclick="window.location='/deals/new'">Post a Deal</div>
+          <div id="post-ad" class="site-post" onclick ="window.location='/deals/new?ad=true'">Post an Ad</div>
+          <img id="share-buttons" src="/assets/share.png"/>
+        </div>
+        <div id="header-mask" class="header" style="
+               display: none;
+               "></div>
+        <div id="main_content">
+          <%= yield %>
+        </div>
+        <div id="footer"
+             style="
+              width: 100%;
+              background-color: black;
+              text-align: left;
+              color:white;
+              height: 32px;
+              ">
+          <div style="
+               float:left;
+               width: 90%;
+               height:32px;
+               ">
+            <ul style="
+               margin-top: 0px;
+               font-weight: bold;
+               ">
+              <li>
+                <a href="/about">
+                  <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <a href="/privacy">
+                  <span>Privacy Policy</span>
+                </a>
+              </li>
+              <li>
+                <a href="/contact">
+                  <span>Contact Us</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div style="
+               float:right;
+               width: 25%;
+               font-size: 0.8em;
+               margin-top:-23px;
+               text-align: right;
+               padding-right: 10px;
+               font-weight: bold;
+               ">
+            <a href="#">
+              <% if !@do_not_display_signin %>
+                <% if current_site_user %>
+                  <%= link_to "Log out" , signout_path , :class=>"headerLink" %>
+                <%else%>
+                  <%= link_to "Log in", signin_path ,:class=>"headerLink" %>
+                <%end%>
+              <%  end %>
+            </a>
+          </div>
+          <div style="clear:both"/>
+        </div>
+      </div>
+    </div>
+        
+      <style>
+        div#footer ul li {
+            display: inline-block;
+            font-size: 0.8em;
+            width: 100px;
+            margin: 3px 2px 0 2px;
+            text-align: center;
+            color: #FFFFFF;
+          }
+      </style>
+      <%= yield :scripts %>
+    </body>
+  </html>
+<%  end %>

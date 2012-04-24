@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sale:</b>
+  <%= @sale_detail.sale_id %>
+</p>
+
+<p>
+  <b>Deal:</b>
+  <%= @sale_detail.deal_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_sale_detail_path(@sale_detail) %> |
+<%= link_to 'Back', sale_details_path %>
